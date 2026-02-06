@@ -38,7 +38,9 @@ If it has an API, we can connect it.
 - **QuickStart**: $99 (1 channel, 1 use case)
 - **Starter**: $199 (1 channel, 3 use cases)
 - **Business**: $499 (all defaults, all channels)
-- **Custom**: Quote for more
+- **ClawCare**: $99/mo (support and maintenance)
+
+Indian Clients: 30% off. GST billed extra as applicable.
 
 AI API costs billed by provider, not included.
 
