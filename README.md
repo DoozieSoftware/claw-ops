@@ -19,7 +19,19 @@ This is the public landing page for **ClawOps** - production-ready OpenClaw oper
 - **Hardened OpenClaw deployments** - Security-first defaults
 - **Multi-channel support** - WhatsApp, Telegram, Slack, Discord
 - **AI provider flexibility** - Claude, GPT-4, Gemini, Kimi, Minimax
+- **Custom integrations** - Connect any API (Zoho, Salesforce, HubSpot, internal tools)
 - **Managed operations** - Monitoring, upgrades, and support
+
+## 🚀 Pipeline Use Cases
+
+| Use Case | Description |
+|----------|-------------|
+| Account Operator | Real-time account access, Indian market (no middleman) |
+| Safety Officer | Offline camera feed & document audit |
+| Purchase Officer | Negotiation research assistant |
+| Project Manager | PM Bot for developer management |
+
+If it has an API, we can connect it.
 
 ## 💰 Pricing
 
