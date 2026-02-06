@@ -14,6 +14,14 @@ This is the public landing page for **ClawOps** - production-ready OpenClaw oper
 | [use-cases.html](./use-cases.html) | Curated enterprise use cases |
 | [case-studies.html](./case-studies.html) | How we use ClawOps internally |
 
+## 📋 Legal Documents
+
+| Document | Description |
+|----------|-------------|
+| [TERMS_OF_SERVICE.md](./TERMS_OF_SERVICE.md) | Terms and conditions |
+| [PRIVACY_POLICY.md](./PRIVACY_POLICY.md) | Privacy commitment |
+| [MASTER_SERVICE_AGREEMENT.md](./MASTER_SERVICE_AGREEMENT.md) | Client agreement template |
+
 ## 🎯 What We Do
 
 - **Hardened OpenClaw deployments** - Security-first defaults
