@@ -65,11 +65,12 @@
         .pipeline-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.6; }
         
         .pricing-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
-        @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
-        .price-card { padding: 2rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1.5rem; display: flex; flex-direction: column; transition: all 0.3s; }
+        @media (min-width: 512px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(4, 1fr); } }
+        .price-card { padding: 2rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1.5rem; display: flex; flex-direction: column; transition: all 0.3s; min-height: 200px; }
         .price-card:hover { transform: scale(1.02); }
         .price-card.featured { background: rgba(15,23,42,0.6); border: 2px solid rgba(239,68,68,0.5); position: relative; }
-        .featured-badge { position: absolute; top: 0; right: 0; background: #ef4444; color: white; font-size: 0.625rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 0 0.75rem 0 0.75rem; text-transform: uppercase; }
+        .featured-badge { position: absolute; top: -1px; right: 1rem; background: #ef4444; color: white; font-size: 0.625rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 0 0 0.5rem 0.5rem; text-transform: uppercase; transform: translateY(-50%); }
         .price-title { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
         .price-desc { font-size: 0.875rem; color: #94a3b8; margin-bottom: 2rem; flex-grow: 1; }
         .price-amount { font-size: 1.875rem; font-weight: 800; color: #fb923c; }
