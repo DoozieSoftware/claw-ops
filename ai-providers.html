@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Providers | ClawOps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(to right, #fb923c, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin: 2rem 0 1rem; }
+        .subtitle { font-size: 1.25rem; color: #94a3b8; margin-bottom: 2rem; }
+        .card { background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1rem; }
+        .card:hover { border-color: rgba(249,115,22,0.5); }
+        .card h3 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .card p { font-size: 0.875rem; color: #94a3b8; }
+        .badge { display: inline-block; padding: 0.25rem 0.75rem; font-size: 0.625rem; font-weight: 600; text-transform: uppercase; border-radius: 0.25rem; margin-bottom: 0.5rem; }
+        .badge-enterprise { color: #fb923c; background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); }
+        .badge-mid { color: #22c55e; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); }
+        .note { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); border-radius: 0.5rem; padding: 1rem; margin: 2rem 0; color: #fb923c; }
+        .note strong { color: #fff; }
+        a { color: #fb923c; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-bottom: 2rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">← Back to ClawOps</a>
+    <h1>AI Provider Recommendations</h1>
+    <p class="subtitle">Choose the right AI model for your enterprise needs.</p>
+    
+    <h2>🏢 Enterprise / Complex Reasoning</h2>
+    <div class="card">
+        <span class="badge badge-enterprise">Best for complex tasks</span>
+        <h3>Claude.ai API (Anthropic)</h3>
+        <p>Best-in-class reasoning, long context (200K+ tokens), and enterprise-grade security. Ideal for strategic analysis and complex planning.</p>
+    </div>
+    <div class="card">
+        <span class="badge badge-enterprise">Multimodal</span>
+        <h3>GPT-4o API (OpenAI)</h3>
+        <p>Multimodal capabilities (text, vision, audio). Fast response times. Great for function calling and tool use.</p>
+    </div>
+    <div class="card">
+        <span class="badge badge-enterprise">Large Context</span>
+        <h3>Gemini API (Google)</h3>
+        <p>Massive context window (1M+ tokens). Cost-effective for large document processing. Native Google Workspace integration.</p>
+    </div>
+    
+    <h2>⚡ Mid-Range / Skills</h2>
+    <div class="card">
+        <span class="badge badge-mid">Cost-Effective</span>
+        <h3>GLM API (智谱AI)</h3>
+        <p>Strong Chinese language capabilities. Cost-effective for standard automation tasks. Good reasoning capabilities.</p>
+    </div>
+    <div class="card">
+        <span class="badge badge-mid">Long Context</span>
+        <h3>Kimi k2.5 (Moonshot)</h3>
+        <p>Extremely long context window (1M+ tokens). Fast inference. Great for document analysis and summarization.</p>
+    </div>
+    <div class="card">
+        <span class="badge badge-mid">Recommended</span>
+        <h3>Minimax API</h3>
+        <p>Internally tested and recommended. Balanced performance and cost. Good for diverse automation needs.</p>
+    </div>
+    
+    <div class="note">
+        <strong>Note:</strong> AI API subscription costs are billed directly by your chosen provider (OpenAI, Anthropic, Google, Kimi, Minimax, etc.) and are <strong>NOT included</strong> in our ClawOps setup fees.
+    </div>
+    
+    <p style="margin-top: 2rem;"><a href="mailto:akshay@dooziesoft.com">Contact us →</a> for recommendations on your specific use case.</p>
+</body>
+</html>

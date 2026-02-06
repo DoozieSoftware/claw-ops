@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channels | ClawOps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(to right, #fb923c, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: 1.25rem; color: #94a3b8; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .card { background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
+        .card:hover { border-color: rgba(249,115,22,0.5); transform: translateY(-2px); }
+        .card h3 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .card p { font-size: 0.875rem; color: #94a3b8; margin-bottom: 1rem; }
+        .use-list { list-style: none; padding: 0; margin: 0; }
+        .use-list li { font-size: 0.875rem; color: #cbd5e1; padding: 0.25rem 0; padding-left: 1rem; position: relative; }
+        .use-list li::before { content: "•"; position: absolute; left: 0; color: #fb923c; }
+        a { color: #fb923c; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-bottom: 2rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">← Back to ClawOps</a>
+    <h1>Supported Channels</h1>
+    <p class="subtitle">Production-ready integrations for your enterprise workflow.</p>
+    
+    <div class="grid">
+        <div class="card">
+            <h3>WhatsApp</h3>
+            <p>Reach customers and teams on the world's most popular messaging app.</p>
+            <ul class="use-list">
+                <li>Customer support automation</li>
+                <li>Team notifications</li>
+                <li>Lead capture</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h3>Telegram</h3>
+            <p>Powerful bot API for secure, feature-rich automation.</p>
+            <ul class="use-list">
+                <li>Chat with your mailbox</li>
+                <li>Meeting scheduling</li>
+                <li>Team commands</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h3>Slack</h3>
+            <p>Enterprise-grade team communication hub.</p>
+            <ul class="use-list">
+                <li>Daily standup bots</li>
+                <li>Deploy notifications</li>
+                <li>Analytics summaries</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h3>Discord</h3>
+            <p>Community engagement and team collaboration.</p>
+            <ul class="use-list">
+                <li>Community moderation</li>
+                <li>Event notifications</li>
+                <li>Member onboarding</li>
+            </ul>
+        </div>
+    </div>
+    
+    <p style="margin-top: 2rem;">Need a different channel? <a href="mailto:akshay@dooziesoft.com">Contact us →</a></p>
+</body>
+</html>
