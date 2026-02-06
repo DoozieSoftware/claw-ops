@@ -1,0 +1,56 @@
+# ClawOps Production Template
+# This is an OPINIONATED setup. Changes may affect stability/hardening.
+version: "3.8"
+
+services:
+  # OpenClaw Gateway
+  gateway:
+    image: ghcr.io/openclaw/gateway:latest
+    container_name: claw_gateway
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - GATEWAY_LOG_LEVEL=info
+    env_file:
+      - .env.claw
+    ports:
+      - "127.0.0.1:3000:3000" # Localhost binding by default
+    volumes:
+      - claw_data:/root/.openclaw
+      - ./backups:/backups # Backup mount point
+    networks:
+      - claw_internal
+    # Resource limits to prevent runaway processes
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # Optional: Reverse Proxy (Nginx) for SSL/Termination
+  # Uncomment and configure SSL certs for production use
+  # proxy:
+  #   image: nginx:alpine
+  #   container_name: claw_proxy
+  #   restart: unless-stopped
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #     - ./certs:/etc/nginx/certs
+  #   depends_on:
+  #     - gateway
+  #   networks:
+  #     - claw_internal
+
+volumes:
+  claw_data:
+    driver: local
+
+networks:
+  claw_internal:
+    driver: bridge
