@@ -22,13 +22,11 @@ This is the public landing page for **ClawOps** - production-ready OpenClaw oper
 
 ## 💰 Pricing
 
-| Plan | Price | Description |
-|------|-------|-------------|
-| QuickStart | $499 | Deploy any curated use case in 24 hours |
-| Enterprise | $2,499 | Custom use case + hardening + ongoing ops |
-| Care | $499/mo | Monthly maintenance and monitoring |
+- **QuickStart**: $499
+- **Enterprise**: $2,499
+- **Care**: $499/mo
 
-**Note**: AI API subscription costs are billed by your chosen provider (OpenAI, Anthropic, Google, Kimi, Minimax) and are **not included** in our setup fees.
+AI API costs billed by provider, not included.
 
 ## 🔗 Links
 
