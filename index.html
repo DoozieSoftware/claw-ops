@@ -350,6 +350,25 @@
             font-style: italic;
         }
         
+        /* Pipeline Cards */
+        .pipeline-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
+        @media (min-width: 768px) { .pipeline-grid { grid-template-columns: repeat(2, 1fr); } }
+        
+        .pipeline-card {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid #1e293b;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+        .pipeline-card:hover {
+            border-color: rgba(249, 115, 22, 0.5);
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .pipeline-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .pipeline-card h3 { font-size: 1.125rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .pipeline-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.6; }
+        
         /* Footer */
         footer {
             padding-top: 3rem;
@@ -509,6 +528,41 @@
                     <p class="card-text">Environment-specific docs for your team.</p>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <h2>Custom Use Cases</h2>
+            <p class="problem-text">Have a system with an API? We can connect it to Telegram, Slack, or WhatsApp. No need to ditch what already works.</p>
+            
+            <div class="pipeline-grid">
+                <div class="pipeline-card">
+                    <div class="pipeline-icon">🏦</div>
+                    <h3>Account Operator</h3>
+                    <p class="pipeline-desc">For Indian market. Speak with your account in real-time. No middleman. Direct access via chat.</p>
+                </div>
+                <div class="pipeline-card">
+                    <div class="pipeline-icon">👮</div>
+                    <h3>Safety Officer</h3>
+                    <p class="pipeline-desc">Silently audits camera feeds and safety documents. Everything stays offline inside your network.</p>
+                </div>
+                <div class="pipeline-card">
+                    <div class="pipeline-icon">🛒</div>
+                    <h3>Purchase Officer</h3>
+                    <p class="pipeline-desc">Assists with negotiation research. Doesn't talk to vendors directly — just helps you negotiate better.</p>
+                </div>
+                <div class="pipeline-card">
+                    <div class="pipeline-icon">📋</div>
+                    <h3>Project Manager</h3>
+                    <p class="pipeline-desc">Hire a developer, manage them via PM Bot. Track进度, assign tasks, all from chat.</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 1.5rem;">
+                <a href="mailto:akshay@dooziesoft.com?subject=Custom Use Case" class="cta-secondary">We can build anything with an API →</a>
+            </p>
+            <p style="text-align: center; margin-top: 0.5rem; color: #64748b; font-size: 0.75rem;">
+                Zoho CRM, Salesforce, HubSpot, custom internal tools... if it has an API, we can connect it.
+            </p>
         </section>
 
         <section>
