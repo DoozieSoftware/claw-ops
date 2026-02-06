@@ -43,7 +43,7 @@
         
         /* Container */
         .container {
-            max-width: 48rem;
+            max-width: 56rem;
             margin: 0 auto;
             padding: 5rem 1.5rem;
             position: relative;
@@ -117,11 +117,40 @@
         .github-link svg { width: 1.25rem; height: 1.25rem; }
         
         /* Sections */
-        section { margin-bottom: 3rem; }
+        section { margin-bottom: 4rem; }
         .problem-text { font-size: 1.125rem; color: #94a3b8; margin-bottom: 1rem; }
         .problem-highlight { color: #fdba74; opacity: 0.8; }
         
-        /* Cards Grid */
+        /* Use Cases Grid */
+        .use-case-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
+        @media (min-width: 768px) { .use-case-grid { grid-template-columns: repeat(2, 1fr); } }
+        
+        .use-case {
+            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid #1e293b;
+            border-radius: 1rem;
+            transition: all 0.3s;
+        }
+        .use-case:hover {
+            border-color: rgba(249, 115, 22, 0.5);
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .use-case-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.625rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #22c55e;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .use-case-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.7; }
+        
+        /* Features Grid */
         .grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
         @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
         
@@ -261,6 +290,33 @@
         </header>
 
         <section>
+            <h2>Use Cases</h2>
+            <p class="problem-text">Curated, boring, production-ready agents for enterprise workflows.</p>
+            <div class="use-case-grid">
+                <div class="use-case">
+                    <span class="use-case-badge">Email</span>
+                    <h3>Chat with Your Mailbox</h3>
+                    <p class="use-case-desc">Query your emails via Telegram or WhatsApp. Get summaries, find attachments, and draft replies without opening Gmail.</p>
+                </div>
+                <div class="use-case">
+                    <span class="use-case-badge">Slack</span>
+                    <h3>Daily Standup Bot</h3>
+                    <p class="use-case-desc">Automated standup summaries across teams. No more manual updates. Just answers.</p>
+                </div>
+                <div class="use-case">
+                    <span class="use-case-badge">Calendar</span>
+                    <h3>Meeting Scheduler</h3>
+                    <p class="use-case-desc">Natural language scheduling. "Book a meeting with John next Tuesday" - done.</p>
+                </div>
+                <div class="use-case">
+                    <span class="use-case-badge">Reporting</span>
+                    <h3>Weekly Reports</h3>
+                    <p class="use-case-desc">Auto-generated weekly summaries from your tasks, commits, and metrics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
             <h2>The Problem</h2>
             <p class="problem-text">OpenClaw is powerful, but production is unforgiving. Unsafe defaults, silent failures, and breaking upgrades turn your AI workforce into an ops nightmare.</p>
             <p class="problem-text problem-highlight">Documentation is not accountability. We are.</p>
@@ -301,23 +357,23 @@
         </section>
 
         <section>
-            <h2>Offerings (Lean Ops)</h2>
+            <h2>Offerings</h2>
             <div class="pricing-grid">
                 <div class="price-card">
                     <h3 class="price-title">QuickStart</h3>
-                    <p class="price-desc">Local/VPS install with baseline config.</p>
-                    <div class="price-amount">$99<span class="price-period">/one-time</span></div>
+                    <p class="price-desc">Deploy any curated use case in 24 hours.</p>
+                    <div class="price-amount">$499<span class="price-period">/one-time</span></div>
                 </div>
                 <div class="price-card featured">
-                    <span class="featured-badge">Recommended</span>
-                    <h3 class="price-title">Production Hardening</h3>
-                    <p class="price-desc">Dockerized, secured, with rollback plan.</p>
-                    <div class="price-amount">$399+<span class="price-period">/one-time</span></div>
+                    <span class="featured-badge">Popular</span>
+                    <h3 class="price-title">Enterprise</h3>
+                    <p class="price-desc">Custom use case + hardening + ongoing ops.</p>
+                    <div class="price-amount">$2,499<span class="price-period">/one-time</span></div>
                 </div>
                 <div class="price-card">
                     <h3 class="price-title">ClawOps Care</h3>
-                    <p class="price-desc">Monthly maintenance, upgrades, and support.</p>
-                    <div class="price-amount">$199<span class="price-period">/mo</span></div>
+                    <p class="price-desc">Monthly maintenance and monitoring.</p>
+                    <div class="price-amount">$499<span class="price-period">/mo</span></div>
                 </div>
             </div>
         </section>
