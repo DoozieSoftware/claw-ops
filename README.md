@@ -1,32 +1,41 @@
-# 🦞 ClawOps - Production-Grade OpenClaw Templates
+# 🦞 ClawOps - Production-Grade OpenClaw Operations
 
-> "Why your AI agent install breaks in Week 2."
+> "Without the infrastructure babysitting."
 
-This repo contains our **battle-tested production templates** for OpenClaw. We use these templates to harden client deployments and ensure boring reliability.
+This is the public landing page for **ClawOps** - production-ready OpenClaw operations for enterprises.
 
-## 🚀 What's Inside
+## 📄 Pages
 
-- **`docker-compose.prod.yml`** - Production-ready Docker config with resource limits.
-- **`templates/nginx.conf.example`** - SSL-terminated reverse proxy.
-- **`templates/.env.claw.example`** - Security-first environment template.
-- **`scripts/install.sh`** - One-command deployment & validation.
+| Page | Description |
+|------|-------------|
+| [index.html](./index.html) | Main landing page with pricing and use cases |
+| [ai-providers.html](./ai-providers.html) | AI provider recommendations |
+| [channels.html](./channels.html) | Supported channels overview |
+| [use-cases.html](./use-cases.html) | Curated enterprise use cases |
 
-## 📖 How to Use
+## 🎯 What We Do
 
-```bash
-git clone git@github.com:DoozieSoftware/claw-ops.git
-cd claw-ops
-# Follow the README in each subdirectory
-```
+- **Hardened OpenClaw deployments** - Security-first defaults
+- **Multi-channel support** - WhatsApp, Telegram, Slack, Discord
+- **AI provider flexibility** - Claude, GPT-4, Gemini, Kimi, Minimax
+- **Managed operations** - Monitoring, upgrades, and support
 
-## 💰 Why Free?
+## 💰 Pricing
 
-We believe in **Engineering as Marketing**. These templates prove we know what we're doing.
+| Plan | Price | Description |
+|------|-------|-------------|
+| QuickStart | $499 | Deploy any curated use case in 24 hours |
+| Enterprise | $2,499 | Custom use case + hardening + ongoing ops |
+| Care | $499/mo | Monthly maintenance and monitoring |
 
-If you need **managed hosting, upgrades, and 24/7 monitoring**, we offer **ClawOps Care** ($199/mo).
+**Note**: AI API subscription costs are billed by your chosen provider (OpenAI, Anthropic, Google, Kimi, Minimax) and are **not included** in our setup fees.
 
-🔗 **[Visit ClawOps](http://your-domain.com)** | 📧 **Contact: akshay@dooziesoft.com**
+## 🔗 Links
+
+- 🌐 **Website**: [ClawOps](https://dooziesoftware.github.io/claw-ops/)
+- 📧 **Contact**: akshay@dooziesoft.com
+- 🐙 **GitHub**: [DoozieSoftware/claw-ops](https://github.com/DoozieSoftware/claw-ops)
 
 ---
 
-**Built with 💧 by DoozieSoftware**
+**Built with ❤️ by [DoozieSoftware](https://dooziesoft.com)**
