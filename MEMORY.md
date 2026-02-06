@@ -44,13 +44,25 @@ Use upstream OpenClaw core. Add enterprise value via skills/plugins, not core ch
 - Public: `DoozieSoftware/claw-ops` - Landing page, channels, AI recommendations, case studies
 - Private: `DoozieSoftware/claw-ops-internal` - Engineer guide, configs, use-case-engine skill
 
+## Documentation (Internal)
+| Document | Description |
+|----------|-------------|
+| CLAWOPS_OVERVIEW.md | Business overview and positioning |
+| MARKETING_PLAN.md | Detailed marketing strategy |
+| ROADMAP.md | Feature and timeline roadmap |
+| ENGINEER_GUIDE.md | Step-by-step client setup |
+| PROGRESS.md | Current status and milestones |
+
 ## User Context
 - **Akshay** (dooziesoft.com)
 - Timezone: Asia/Calcutta
 - Browser relay not available - use Git commands
 
-## Last Session
-- Created landing page with AI recommendations
-- Created channels page (WhatsApp, Telegram, Slack, Discord)
-- Created engineer guide with channel configuration steps
-- Created use-case-builder skill for automated config generation
+## Last Session (Feb 6, 2026)
+- Reorganized landing page flow (Problem → Solution → Use Cases → Pricing)
+- Added Case Studies page (Redmine, Telegram bots, Camera automation, Boss Tasks)
+- Added Custom Use Cases section (API integrations)
+- Added Pipeline section (Account Operator, Safety Officer, etc.)
+- Added ClawCare package ($99/mo)
+- Added 30% Indian client discount
+- Created comprehensive internal documentation (Overview, Marketing Plan, Roadmap)
