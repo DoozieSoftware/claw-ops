@@ -1,0 +1,12 @@
+{
+  "snapshots": [
+    {
+      "file": "/home/akshay/.openclaw/workspace/.snapshots/clawops-snapshot-20260206-190753.tar.gz",
+      "metadata": "/home/akshay/.openclaw/workspace/.snapshots/clawops-snapshot-20260206-190753.tar.meta.json",
+      "created_at": "2026-02-06T19:07:53.393304",
+      "files": 177,
+      "size_bytes": 179619,
+      "checksum": "bdf45a179f1ba8e69868d804218dc04dfb4054ad3f5e629e79826781a5b6b340"
+    }
+  ]
+}

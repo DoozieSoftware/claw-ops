@@ -1,32 +1,84 @@
-# 🦞 ClawOps - Production-Grade OpenClaw Templates
+# 🦞 ClawOps - AI Agent Operations
 
-> "Why your AI agent install breaks in Week 2."
+> **Your AI workforce, managed.**
 
-This repo contains our **battle-tested production templates** for OpenClaw. We use these templates to harden client deployments and ensure boring reliability.
+This workspace contains ClawOps — the brain and operations for your AI agent business.
 
-## 🚀 What's Inside
+## Two Repositories
 
-- **`docker-compose.prod.yml`** - Production-ready Docker config with resource limits.
-- **`templates/nginx.conf.example`** - SSL-terminated reverse proxy.
-- **`templates/.env.claw.example`** - Security-first environment template.
-- **`scripts/install.sh`** - One-command deployment & validation.
-
-## 📖 How to Use
-
-```bash
-git clone git@github.com:DoozieSoftware/claw-ops.git
-cd claw-ops
-# Follow the README in each subdirectory
-```
-
-## 💰 Why Free?
-
-We believe in **Engineering as Marketing**. These templates prove we know what we're doing.
-
-If you need **managed hosting, upgrades, and 24/7 monitoring**, we offer **ClawOps Care** ($199/mo).
-
-🔗 **[Visit ClawOps](http://your-domain.com)** | 📧 **Contact: akshay@dooziesoft.com**
+| Repository | Purpose | Access |
+|------------|---------|--------|
+| `claw-ops` (public) | Landing page, docs | Public |
+| `claw-ops-internal` (private) | **Your brain!** | Private |
 
 ---
 
-**Built with 💧 by DoozieSoftware**
+## 👉 Go Here for Everything
+
+```
+claw-ops-internal/
+├── 📁 memory/              ← Your long-term memory
+├── 📁 scripts/             ← Your tools
+├── 📁 skills/             ← Your capabilities
+├── 📁 vault/              ← Client data
+├── 📄 SOUL.md              ← Your identity
+├── 📄 PROGRESS.md          ← Current status
+├── 📄 ENGINEER_GUIDE.md    ← How to work
+└── 📄 README.md            ← Start here!
+```
+
+---
+
+## Quick Start
+
+```bash
+# Go to internal repo
+cd claw-ops-internal
+
+# Read the README
+cat README.md
+
+# Check memory
+cat MEMORY.md
+
+# Check today's todos
+cat PROGRESS.md
+
+# Run daily backup
+python3 scripts/backup_manager.py --daily
+```
+
+---
+
+## Public Repository (claw-ops)
+
+Public-facing landing page and documentation:
+
+```
+claw-ops/
+├── 📄 index.html          ← Main landing page
+├── 📄 README.md           ← Public overview
+└── 📁 ...                 ← Marketing materials
+```
+
+---
+
+## Commands
+
+```bash
+# Daily workflow
+cd claw-ops-internal
+cat memory/$(date +%Y-%m-%d).md  # Today's notes
+cat PROGRESS.md                  # What's in flight
+
+# Backup
+python3 scripts/backup_manager.py --daily
+
+# Client management
+python3 scripts/client_vault.py --list-clients
+```
+
+---
+
+*ClawOps — Your AI workforce, managed.*
+

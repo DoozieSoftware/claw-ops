@@ -1,0 +1,1150 @@
+{
+  "snapshot_file": "/home/akshay/.openclaw/workspace/.snapshots/clawops-snapshot-20260206-190753.tar.gz",
+  "created_at": "2026-02-06T19:07:53.393304",
+  "workspace": "/home/akshay/.openclaw/workspace",
+  "files_included": 177,
+  "total_size_bytes": 179619,
+  "manifest": {
+    "generated_at": "2026-02-06T19:07:52.975830",
+    "workspace": "/home/akshay/.openclaw/workspace",
+    "categories": {
+      "memory": {
+        "description": "Your brain - memories and lessons learned",
+        "files": [
+          {
+            "path": "MEMORY.md",
+            "size_bytes": 6501,
+            "modified": "2026-02-06T19:02:27.375040",
+            "checksum": "69604db57a5fc3af8fdb6360bb7324335a4150aba8ab6135c67cc1174e39e5a3"
+          },
+          {
+            "path": "memory/2026-02-06.md",
+            "size_bytes": 1819,
+            "modified": "2026-02-06T17:21:12.038948",
+            "checksum": "a821dacb506cc32fa27e92d7c707aea69cb346f4c4bbad81d017ba141b7a7915"
+          }
+        ],
+        "file_count": 2,
+        "total_size_bytes": 8320,
+        "total_size_human": "8.1 KB"
+      },
+      "progress": {
+        "description": "Current status and your identity",
+        "files": [
+          {
+            "path": "SOUL.md",
+            "size_bytes": 1673,
+            "modified": "2026-02-06T15:11:21.219352",
+            "checksum": "95c467f710183b2c0397c29ec4ef886bb723671a39ee767dc4d59165f723b68f"
+          }
+        ],
+        "file_count": 1,
+        "total_size_bytes": 1673,
+        "total_size_human": "1.6 KB"
+      },
+      "vault": {
+        "description": "All client data - REVENUE!",
+        "files": [],
+        "file_count": 0,
+        "total_size_bytes": 0,
+        "total_size_human": "0.0 KB"
+      },
+      "scripts": {
+        "description": "Your operational tools",
+        "files": [
+          {
+            "path": "claw-ops-internal/scripts/backup_manager.py",
+            "size_bytes": 28953,
+            "modified": "2026-02-06T18:59:14.218947",
+            "checksum": "7bac48b26ad5566b87cd9ea826821f29187edc9d664650ac681212ec67196e6f"
+          },
+          {
+            "path": "claw-ops-internal/scripts/care-dashboard.sh",
+            "size_bytes": 2276,
+            "modified": "2026-02-06T10:27:42.240874",
+            "checksum": "9a9208d257f98e3f34a53ca6b2d9002cf7f35bb405e54ad0aa660e4ed8175956"
+          },
+          {
+            "path": "claw-ops-internal/scripts/client_vault.py",
+            "size_bytes": 17996,
+            "modified": "2026-02-06T18:22:03.132403",
+            "checksum": "7ec4f46e4cfa11edffd898ca4f3ab41a04386d7cb092f261f08edd7066bcb5b0"
+          },
+          {
+            "path": "claw-ops-internal/scripts/immutability_manager.py",
+            "size_bytes": 22111,
+            "modified": "2026-02-06T18:23:55.829147",
+            "checksum": "de7545759771de77d08978717a2ac593cd14b67a572f0c352655b13bf6ef9c1a"
+          },
+          {
+            "path": "claw-ops-internal/scripts/sop-003-install.sh",
+            "size_bytes": 4792,
+            "modified": "2026-02-06T14:23:44.282222",
+            "checksum": "596f54d1797ad01259029ffae31a73fd78728b16780555ea4736c7311c25ce58"
+          },
+          {
+            "path": "claw-ops-internal/scripts/soul_validator.py",
+            "size_bytes": 14741,
+            "modified": "2026-02-06T18:05:53.004390",
+            "checksum": "c35755745f02f6d89381f52617d222884479d6f101e167b156a1f9a1775da018"
+          },
+          {
+            "path": "claw-ops-internal/scripts/update_manager.py",
+            "size_bytes": 16097,
+            "modified": "2026-02-06T18:49:54.324263",
+            "checksum": "b9afaa95ffc0a7bacd8e91d46689a1532cbc3e48c317c61113879efad134b605"
+          },
+          {
+            "path": "claw-ops-internal/scripts/workspace_preserver.py",
+            "size_bytes": 18039,
+            "modified": "2026-02-06T19:07:31.964919",
+            "checksum": "9247f47a0fd5e006c01f9d9cccc5b6d53f79a0e592a18cf0c7fea4321518d836"
+          }
+        ],
+        "file_count": 8,
+        "total_size_bytes": 125005,
+        "total_size_human": "122.1 KB"
+      },
+      "skills": {
+        "description": "Your capabilities",
+        "files": [
+          {
+            "path": "claw-ops-internal/skills/security/README.md",
+            "size_bytes": 9102,
+            "modified": "2026-02-06T18:42:43.241583",
+            "checksum": "78233383e7e8e97afe0d7a301ff127f8644fb44eb9632ab11d8b643afa155653"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/SKILL.md",
+            "size_bytes": 9490,
+            "modified": "2026-02-06T18:43:00.475850",
+            "checksum": "07ff2298e53d027c05659c74826d22d1b8a85082e475dce498069799cae8af52"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/config.yaml",
+            "size_bytes": 4193,
+            "modified": "2026-02-06T18:38:11.495379",
+            "checksum": "8ddca0d7dd6844b189c10d21c00c16a01e196af231bdb07a199139ad55cce306"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/hooks/pre-action.js",
+            "size_bytes": 9547,
+            "modified": "2026-02-06T18:41:31.464471",
+            "checksum": "ba022d597a3dcbb419f2a4093d2142c1839614abd3545a1e311592ed02224364"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/package.json",
+            "size_bytes": 465,
+            "modified": "2026-02-06T18:42:50.150690",
+            "checksum": "55211b5426ef8ab34605b5fef7112d81c0d5f79941365973f99bdda356bdc7cd"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/scripts/immutability_enforcer.py",
+            "size_bytes": 19255,
+            "modified": "2026-02-06T18:40:41.345696",
+            "checksum": "3fc0ffacfc0ddd739c15a06635c3b2e67ca182cd991bc2e64ea2de27cc883c2e"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/scripts/token_validator.py",
+            "size_bytes": 12312,
+            "modified": "2026-02-06T18:39:06.221225",
+            "checksum": "69f984b56860596a0b532fb2fd308bf593b54f48d0336ada1df133cfcd413c23"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/scripts/update_installer.py",
+            "size_bytes": 22294,
+            "modified": "2026-02-06T18:51:21.743618",
+            "checksum": "d0a0fe05a4a2b046c41684d5c8bc810851175cbc9b358b47cb6701d74d2d9df0"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/skill.yaml",
+            "size_bytes": 662,
+            "modified": "2026-02-06T18:37:38.465868",
+            "checksum": "18c04bac811bcfe8d87c9ce1620875f38175ae0b2e98090b8cd84c45ae5c384c"
+          },
+          {
+            "path": "claw-ops-internal/skills/security/utils/config-loader.js",
+            "size_bytes": 4010,
+            "modified": "2026-02-06T18:41:57.089868",
+            "checksum": "5f696483eb6cee1ce123710757f03f8b69efba07541bd9b7ca5a9da8c8c6d440"
+          }
+        ],
+        "file_count": 10,
+        "total_size_bytes": 91330,
+        "total_size_human": "89.2 KB"
+      },
+      "use_cases": {
+        "description": "Pre-made use cases",
+        "files": [
+          {
+            "path": "claw-ops-internal/USE_CASES/_TEMPLATE.md",
+            "size_bytes": 1081,
+            "modified": "2026-02-06T18:06:07.882621",
+            "checksum": "97ffe62069458c24602126a0eff5d78efd2f4f813725b2c925da4098ac0299da"
+          },
+          {
+            "path": "claw-ops-internal/USE_CASES/calendar-scheduler.md",
+            "size_bytes": 2931,
+            "modified": "2026-02-06T18:06:49.082258",
+            "checksum": "fcb3e04741843fb939d41da247767e4d3fdb04acd203e688441fecc8224ffd26"
+          },
+          {
+            "path": "claw-ops-internal/USE_CASES/email-management.md",
+            "size_bytes": 3174,
+            "modified": "2026-02-06T18:06:33.100011",
+            "checksum": "ae5680749ce6605d8afaa783631864b69cc951d5fc93a0e5ab79bb384304c8b2"
+          }
+        ],
+        "file_count": 3,
+        "total_size_bytes": 7186,
+        "total_size_human": "7.0 KB"
+      },
+      "config": {
+        "description": "Business configuration and documentation",
+        "files": [
+          {
+            "path": "AGENTS.md",
+            "size_bytes": 7869,
+            "modified": "2026-02-06T15:11:21.215352",
+            "checksum": "b9a756230e062b1ee3fa5ea17b5d78fa938703938b1ce79bab6e34af41bfdbe4"
+          },
+          {
+            "path": "HEARTBEAT.md",
+            "size_bytes": 168,
+            "modified": "2026-02-06T15:11:21.218761",
+            "checksum": "dac422286075ba178e9bae58154cc0ae8749a66854e438c9c58e8eb91f22c126"
+          },
+          {
+            "path": "IDENTITY.md",
+            "size_bytes": 193,
+            "modified": "2026-02-06T15:11:21.218761",
+            "checksum": "f06066bd6691c09283253ea9ca2ae951830bf2397e73246b4d4d284c6f2fc99d"
+          },
+          {
+            "path": "MEMORY.md",
+            "size_bytes": 6501,
+            "modified": "2026-02-06T19:02:27.375040",
+            "checksum": "69604db57a5fc3af8fdb6360bb7324335a4150aba8ab6135c67cc1174e39e5a3"
+          },
+          {
+            "path": "PRECIOUS.md",
+            "size_bytes": 11346,
+            "modified": "2026-02-06T19:05:51.985317",
+            "checksum": "a48393b1fab866cab5ec461e602872fdf54cde9fa1c55f1746059db43f22145b"
+          },
+          {
+            "path": "README.md",
+            "size_bytes": 1722,
+            "modified": "2026-02-06T19:00:15.046921",
+            "checksum": "63def48d43956ec6e123813a3f319a646058442d402da82b9964fc713410ec1f"
+          },
+          {
+            "path": "SOUL.md",
+            "size_bytes": 1673,
+            "modified": "2026-02-06T15:11:21.219352",
+            "checksum": "95c467f710183b2c0397c29ec4ef886bb723671a39ee767dc4d59165f723b68f"
+          },
+          {
+            "path": "TOOLS.md",
+            "size_bytes": 860,
+            "modified": "2026-02-06T15:11:21.219352",
+            "checksum": "78f3e26b8625ea283c615cec291d4978da5f9f01df730628c5c42094418b8dc2"
+          },
+          {
+            "path": "USER.md",
+            "size_bytes": 148,
+            "modified": "2026-02-06T15:11:21.219352",
+            "checksum": "a4a294e9f8d8b6fd110ff3dc79b3bb72762e18865e4795faf982baa632e848eb"
+          }
+        ],
+        "file_count": 9,
+        "total_size_bytes": 32202,
+        "total_size_human": "31.4 KB"
+      },
+      "templates": {
+        "description": "Configuration templates",
+        "files": [
+          {
+            "path": "claw-ops-internal/templates/SOUL_TEMPLATE.md",
+            "size_bytes": 11102,
+            "modified": "2026-02-06T18:16:57.367671",
+            "checksum": "9c0eabfbca236eebf3cb1d77aa6d0408e746a9763ecc4d1a4d5c34764d867305"
+          },
+          {
+            "path": "claw-ops-internal/templates/docker-compose.prod.yml",
+            "size_bytes": 1306,
+            "modified": "2026-02-06T14:23:44.281379",
+            "checksum": "08844cee416776596402a5666659f6906765e8f872c127d2eb8152df9bb3f26b"
+          },
+          {
+            "path": "claw-ops-internal/templates/nginx.conf.example",
+            "size_bytes": 1744,
+            "modified": "2026-02-06T14:23:44.281943",
+            "checksum": "2d2a155c6188613f9068ac2f6e3d131eaa683e0151a931047edf0aba113535c6"
+          }
+        ],
+        "file_count": 3,
+        "total_size_bytes": 14152,
+        "total_size_human": "13.8 KB"
+      },
+      "git": {
+        "description": "Git history and configuration",
+        "files": [
+          {
+            "path": ".git/COMMIT_EDITMSG",
+            "size_bytes": 40,
+            "modified": "2026-02-06T17:48:45.750493",
+            "checksum": "d6e2c0226f2342b99b18cf497dfceae7bfc7350a075641ddab6dbdd69447cc04"
+          },
+          {
+            "path": ".git/FETCH_HEAD",
+            "size_bytes": 94,
+            "modified": "2026-02-06T14:38:30.873939",
+            "checksum": "57cd4df7d25ac21ddf05b6205a788659a16ffcb60b2037c4b547ac43d99d53bb"
+          },
+          {
+            "path": ".git/HEAD",
+            "size_bytes": 21,
+            "modified": "2026-02-06T14:38:30.938227",
+            "checksum": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
+          },
+          {
+            "path": ".git/ORIG_HEAD",
+            "size_bytes": 41,
+            "modified": "2026-02-06T14:47:33.698576",
+            "checksum": "a476601e619dbae52e36a85679007b21072c8e605b8cb89611b835dd097bd03f"
+          },
+          {
+            "path": ".git/config",
+            "size_bytes": 263,
+            "modified": "2026-02-05T23:08:57.104839",
+            "checksum": "bfa1b6968aca192a2f24ebc2f762ae7283f9d919e138b263bd6c65f0d39a44fe"
+          },
+          {
+            "path": ".git/description",
+            "size_bytes": 73,
+            "modified": "2026-02-04T16:34:04.483150",
+            "checksum": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+          },
+          {
+            "path": ".git/hooks/applypatch-msg.sample",
+            "size_bytes": 478,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+          },
+          {
+            "path": ".git/hooks/commit-msg.sample",
+            "size_bytes": 896,
+            "modified": "2026-02-04T16:34:04.483150",
+            "checksum": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+          },
+          {
+            "path": ".git/hooks/fsmonitor-watchman.sample",
+            "size_bytes": 4726,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+          },
+          {
+            "path": ".git/hooks/post-update.sample",
+            "size_bytes": 189,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+          },
+          {
+            "path": ".git/hooks/pre-applypatch.sample",
+            "size_bytes": 424,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+          },
+          {
+            "path": ".git/hooks/pre-commit.sample",
+            "size_bytes": 1649,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+          },
+          {
+            "path": ".git/hooks/pre-merge-commit.sample",
+            "size_bytes": 416,
+            "modified": "2026-02-04T16:34:04.481150",
+            "checksum": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+          },
+          {
+            "path": ".git/hooks/pre-push.sample",
+            "size_bytes": 1374,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+          },
+          {
+            "path": ".git/hooks/pre-rebase.sample",
+            "size_bytes": 4898,
+            "modified": "2026-02-04T16:34:04.481150",
+            "checksum": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+          },
+          {
+            "path": ".git/hooks/pre-receive.sample",
+            "size_bytes": 544,
+            "modified": "2026-02-04T16:34:04.481150",
+            "checksum": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+          },
+          {
+            "path": ".git/hooks/prepare-commit-msg.sample",
+            "size_bytes": 1492,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+          },
+          {
+            "path": ".git/hooks/push-to-checkout.sample",
+            "size_bytes": 2783,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+          },
+          {
+            "path": ".git/hooks/sendemail-validate.sample",
+            "size_bytes": 2308,
+            "modified": "2026-02-04T16:34:04.483150",
+            "checksum": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+          },
+          {
+            "path": ".git/hooks/update.sample",
+            "size_bytes": 3650,
+            "modified": "2026-02-04T16:34:04.482150",
+            "checksum": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+          },
+          {
+            "path": ".git/index",
+            "size_bytes": 1682,
+            "modified": "2026-02-06T17:48:45.748503",
+            "checksum": "cb3cd117f9e854a457f179a409d0c97605ad4e957810a37ec4725292bf3dddf9"
+          },
+          {
+            "path": ".git/info/exclude",
+            "size_bytes": 240,
+            "modified": "2026-02-04T16:34:04.483150",
+            "checksum": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+          },
+          {
+            "path": ".git/logs/HEAD",
+            "size_bytes": 4027,
+            "modified": "2026-02-06T17:48:45.751503",
+            "checksum": "9c88e3d7933485c5358900badcd4adc94f2aac7c5f748eebcdc68f19eb88877a"
+          },
+          {
+            "path": ".git/logs/refs/heads/main",
+            "size_bytes": 2134,
+            "modified": "2026-02-06T17:48:45.751503",
+            "checksum": "a79f4d21bfab800e8c07404e5d366969fb09fd6805053a427fc510c368eba48f"
+          },
+          {
+            "path": ".git/logs/refs/remotes/origin/main",
+            "size_bytes": 932,
+            "modified": "2026-02-06T14:38:33.976987",
+            "checksum": "3ce32e345bc4e5b903b69eb8d3daeb647ac298e0d40f810cfa8c591969c4a7a7"
+          },
+          {
+            "path": ".git/objects/06/10f938b85af858271ccbc24c18cc76d7ebc904",
+            "size_bytes": 88,
+            "modified": "2026-02-06T14:38:30.602935",
+            "checksum": "68018846d862be9f29b6718226a7c4b7f8fd7aee8e9148dd3adf1020c94865de"
+          },
+          {
+            "path": ".git/objects/0b/47f9fa2e3ccc4fb4ad604e9b3eeec7043ded77",
+            "size_bytes": 1085,
+            "modified": "2026-02-06T17:21:28.625204",
+            "checksum": "93c316a42e398afe1c38167fe30b609e2a170e2b1b62707beabb9e833d2211ec"
+          },
+          {
+            "path": ".git/objects/0b/6c107db4fd268fc693489bb2b68d3fcccba780",
+            "size_bytes": 1444,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "e935bd447604005ba446c782085928956da38f2a7d9f2988084f1017f4366abd"
+          },
+          {
+            "path": ".git/objects/0e/08e520baddffcab3ba0b3ed0bbc2a1540a3843",
+            "size_bytes": 192,
+            "modified": "2026-02-06T17:48:45.750504",
+            "checksum": "65d039970941d7acdf5b844356c4781f2630c0e69f86923530ee59c746e55bc1"
+          },
+          {
+            "path": ".git/objects/0e/24fe7d22ba08a47ca6bf2f1a75369900787f4a",
+            "size_bytes": 194,
+            "modified": "2026-02-06T14:38:30.592935",
+            "checksum": "7899bab4e81a0ba814aa7392989653d42e955e0055c132a7d67081eb1f02c9c4"
+          },
+          {
+            "path": ".git/objects/0e/d20f72ece2f107da65bef69be321bc26400280",
+            "size_bytes": 186,
+            "modified": "2026-02-06T14:38:30.594935",
+            "checksum": "072096277d0d2ee54f08ed52e79bef091592a9edd2a50c51a24a10db1ec75222"
+          },
+          {
+            "path": ".git/objects/0f/eeb483a86ca30cec72611d6c45bb1bec87bda6",
+            "size_bytes": 465,
+            "modified": "2026-02-06T17:48:45.748503",
+            "checksum": "115298ae2af974f94ad457c3af9b0231ea4027f3001e9b110df1947d011d78de"
+          },
+          {
+            "path": ".git/objects/10/834cd6e2af4ecd809714b4537ecffd274c0fa8",
+            "size_bytes": 87,
+            "modified": "2026-02-05T23:03:30.846339",
+            "checksum": "d7b341b3cf59037071d8d33feb885fdc6aeba56a9d18c68ff2d1b0cb4e517310"
+          },
+          {
+            "path": ".git/objects/10/cfcaf42358e5dafad5d85736bd555bf64aa2e1",
+            "size_bytes": 1244,
+            "modified": "2026-02-05T23:03:27.295279",
+            "checksum": "fc7157b30defbcdb6c330246b8e8606a0060da7ee734fc931d788ca0acdbec7b"
+          },
+          {
+            "path": ".git/objects/16/768334d708532c6022adb4cf96c7130f6665c6",
+            "size_bytes": 481,
+            "modified": "2026-02-06T14:38:30.600935",
+            "checksum": "4df52fa94c95e2d84ed8b8b486db0f08cc108fcb443b3fe47a450bb3fc9f44bf"
+          },
+          {
+            "path": ".git/objects/1a/79e9fd0f0cab086c23d40d2501bb441d8b891c",
+            "size_bytes": 189,
+            "modified": "2026-02-06T17:21:28.624204",
+            "checksum": "941f376027db5f782e054748eb958cad42bf1e8bdf004e5dbbe9fda2224d13f7"
+          },
+          {
+            "path": ".git/objects/1d/243ed6fc33d7b5b08379b45af9cc3aa1bc234a",
+            "size_bytes": 3597,
+            "modified": "2026-02-06T14:38:30.837938",
+            "checksum": "41578a665446135af6968a4260f8947b7e9c8e2cc453f1c056b6a3632c1cc86c"
+          },
+          {
+            "path": ".git/objects/1d/a3263d2b291e961e94b8c21c6af323c0e8d9ee",
+            "size_bytes": 5065,
+            "modified": "2026-02-06T14:38:30.829938",
+            "checksum": "4f41ab8b8b45913ebb4948165e3027016e16c3f34f3b4c534ee1dc34e4ca214b"
+          },
+          {
+            "path": ".git/objects/1e/3d8240a658b3dececc66efe81b23f95ec4c143",
+            "size_bytes": 186,
+            "modified": "2026-02-06T14:38:30.591935",
+            "checksum": "277a84c09ce864e1122a5b88d93ef1b457625e3fec8644e98baeb50913068374"
+          },
+          {
+            "path": ".git/objects/1f/1a2904e9548e0fd02ce3f2b85827cdcc54cf7d",
+            "size_bytes": 1002,
+            "modified": "2026-02-06T17:21:28.626204",
+            "checksum": "c297dc0002f2d4769ba646c69755717a58b8acd8e56db055b1c6eb647a8386be"
+          },
+          {
+            "path": ".git/objects/20/5ac9c25ec9ed2ff71a2b1208364c3adba6dede",
+            "size_bytes": 3809,
+            "modified": "2026-02-06T14:38:30.839938",
+            "checksum": "5369358e0ccc870bb7ee05f3f7ffbc1ca43835487799eb3032924f0009843b48"
+          },
+          {
+            "path": ".git/objects/27/e9225c2bd6e8c6adcf13557a7bef595f4b6b4e",
+            "size_bytes": 145,
+            "modified": "2026-02-05T23:03:30.844339",
+            "checksum": "b07d35a3e99888d56b6287eaa512e4638aa4c6752268fb9e20b031230230bccc"
+          },
+          {
+            "path": ".git/objects/28/e518fdcfbf6973118270da3cbc1c99e099877c",
+            "size_bytes": 190,
+            "modified": "2026-02-06T14:38:30.934940",
+            "checksum": "41b21ef83a5e4e040c61fe07e7747808ceec52b6ad233c00d3c7b30bf84755ea"
+          },
+          {
+            "path": ".git/objects/2a/156139d0f9e4cd74f7fb362d4a4f27e7bd0b97",
+            "size_bytes": 179,
+            "modified": "2026-02-05T23:21:44.241751",
+            "checksum": "9f35d0438edec7a86a44d06ffb5e6291dd54824be1a3f3e82dbc57859ae7c224"
+          },
+          {
+            "path": ".git/objects/30/e3422434dca17329679c76377cbf0c0ff2411f",
+            "size_bytes": 1463,
+            "modified": "2026-02-06T14:38:30.855939",
+            "checksum": "8fe16ba1cc406ba3486fd0701133faa4a567ae8f032ace331cddc20c5d9d2d9b"
+          },
+          {
+            "path": ".git/objects/30/f9b894bd54d3a3f9c5992cc3cb22746fb4b96f",
+            "size_bytes": 222,
+            "modified": "2026-02-06T14:38:30.833938",
+            "checksum": "dcc2865eb4467d7f587adc53dcb533be2571efacda9fea30bde2f92de629557c"
+          },
+          {
+            "path": ".git/objects/31/4efe3f9ad00769a932f0c54b1024b30b58e3d2",
+            "size_bytes": 273,
+            "modified": "2026-02-06T14:38:30.853939",
+            "checksum": "0367c13f4d58daaf57d5bd7b706c409eaee6e789b90674d7ab36a36e02499e74"
+          },
+          {
+            "path": ".git/objects/35/5f44c62c7fb075bb731ca88c98982e2911c5fe",
+            "size_bytes": 688,
+            "modified": "2026-02-06T14:38:30.831938",
+            "checksum": "e6d778a3a1d61759440049e7491b601ab300dd86324511aef1611ede563b75d9"
+          },
+          {
+            "path": ".git/objects/36/8656d60da1111befdff7e2bc5889d5ce777350",
+            "size_bytes": 191,
+            "modified": "2026-02-06T14:27:02.469208",
+            "checksum": "73d2f83c10786154515d952b74045496a418c1317682c321dea5f7d263f325c8"
+          },
+          {
+            "path": ".git/objects/38/f5e3abbfaafeabb3a93546b4e28fef3e7a5f99",
+            "size_bytes": 404,
+            "modified": "2026-02-06T14:32:26.703262",
+            "checksum": "368bff02188e56dbbdae68dcc88bea4c25aaa61d6451a7aab1e27bb03061caf0"
+          },
+          {
+            "path": ".git/objects/3a/ddcdc06887635e60ab7932e41c097fa21d0882",
+            "size_bytes": 785,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "93cc720d8442b0a39cb99678f3fc5c17ca68fdcf3415727ea2b8d2b6550886e2"
+          },
+          {
+            "path": ".git/objects/3c/23a4066d2dd35bb3fbc1318068601cfa16e590",
+            "size_bytes": 504,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "7a73f4b8c319766f18026288443aa64c6fd73ebf88c2130fdd1b202b914b8397"
+          },
+          {
+            "path": ".git/objects/3c/8520766d26a6a027453c2608f40f57ee21d5c2",
+            "size_bytes": 274,
+            "modified": "2026-02-06T14:38:30.845938",
+            "checksum": "7627caefc208bd3ccdd9c7c8fc021e16c866d3bfa212f8c103fc726525e37d37"
+          },
+          {
+            "path": ".git/objects/3d/3a114112522d76c0cb120a346bfa0e95ae5597",
+            "size_bytes": 3514,
+            "modified": "2026-02-06T14:38:30.845938",
+            "checksum": "7ada09ee3bed911e097076ea9b4b0e3c9b0657de3f6545be8ea36f7cc4dea9d4"
+          },
+          {
+            "path": ".git/objects/40/9ea31060f2dc2001f91de24cfdc1f3681f09ab",
+            "size_bytes": 328,
+            "modified": "2026-02-05T23:16:50.899820",
+            "checksum": "554c3c0dd4343fc343085861f989a1f30e3342a8194838d4dfa9a1aa829a8a79"
+          },
+          {
+            "path": ".git/objects/41/3ea360107dd12c91d4edbbcbeaad36bd866052",
+            "size_bytes": 404,
+            "modified": "2026-02-06T14:38:18.512746",
+            "checksum": "55e6ffe4ae782e4b3ede77efb152a1fde08aea49f8f2c330a55185c2cc348c10"
+          },
+          {
+            "path": ".git/objects/43/8b1761b79da5038ef519221c34aa22b1842e7f",
+            "size_bytes": 2936,
+            "modified": "2026-02-06T14:38:30.849939",
+            "checksum": "eb0ecf543ba9124ed42086e2732e0283cdff5ca950d2cb9525dd782bb15230e9"
+          },
+          {
+            "path": ".git/objects/47/5d7734e5be25e0fedc6d62de8cd1ab42119c39",
+            "size_bytes": 180,
+            "modified": "2026-02-06T14:38:30.593935",
+            "checksum": "643804fac5fd94c174fe4909ff9f6caebb5e95a1f9e5a96f43085927b5181111"
+          },
+          {
+            "path": ".git/objects/49/841691e97fad41e1bb51c02ad9aeff0516af35",
+            "size_bytes": 273,
+            "modified": "2026-02-06T14:38:30.841938",
+            "checksum": "7d8fcc07abc6b0b3671879871868090884e5f03f03e26f63d439d0a3f3c347a7"
+          },
+          {
+            "path": ".git/objects/4f/fdfc48e9b724b138c060af034e6be8faa323c2",
+            "size_bytes": 122,
+            "modified": "2026-02-05T23:16:50.900820",
+            "checksum": "c097b9d88f104275e35c11e984cb2f71326548873dc36e4102606fbf01fe5aff"
+          },
+          {
+            "path": ".git/objects/50/b72e50b0c76626c20609635b5f130236de8043",
+            "size_bytes": 88,
+            "modified": "2026-02-06T14:38:30.830938",
+            "checksum": "d14dc173f6cc98891cf637a9f6fdaa4550617fe389707665a53f1e1e69693a35"
+          },
+          {
+            "path": ".git/objects/55/b452d85b74444c559bffcb552642a88cfb14ac",
+            "size_bytes": 5072,
+            "modified": "2026-02-06T14:38:30.821938",
+            "checksum": "b160512deec08189eef1f291f71e731c66da53c653baa52d91ef800d6249d872"
+          },
+          {
+            "path": ".git/objects/56/219a00e7992dcfbe2a94de254c4c13c98d2efc",
+            "size_bytes": 672,
+            "modified": "2026-02-06T14:38:30.833938",
+            "checksum": "006f2b37ac8492f92e5cf110a319deaee911eedab021d4919a17da5fde1e4b60"
+          },
+          {
+            "path": ".git/objects/5c/ed73791cfd4a119514619a0dda0bd6e23432ef",
+            "size_bytes": 4580,
+            "modified": "2026-02-06T14:38:30.826938",
+            "checksum": "f474b35cf19e2f802672fecd5f3de84d5677e65b84225ee0c2dd3c6186c95905"
+          },
+          {
+            "path": ".git/objects/5f/97f2bde9d85e6fec2150aa1a1e5dee11f51ace",
+            "size_bytes": 42,
+            "modified": "2026-02-06T14:38:30.857939",
+            "checksum": "c7a37e8503be82062c040855a6c505127d6d49d1838f3bea0889ad3e480187c6"
+          },
+          {
+            "path": ".git/objects/60/ed2deeb556404215af02a92314ce87efd5fd28",
+            "size_bytes": 185,
+            "modified": "2026-02-06T14:38:30.594935",
+            "checksum": "367b5fb6e48d2978479987ea7966c25566ae977946f54ec4408818e9b93b2278"
+          },
+          {
+            "path": ".git/objects/64/175d363000577ac1966f2a85569e6e42ef9879",
+            "size_bytes": 177,
+            "modified": "2026-02-05T23:03:27.295279",
+            "checksum": "a424636f50cb1101aa07a0e2999ac4904e9584c586d5f2d77ad5f230a5a32bf9"
+          },
+          {
+            "path": ".git/objects/64/f277457391ff49f983e0a6bccfef3bc8b09743",
+            "size_bytes": 274,
+            "modified": "2026-02-06T14:38:30.832938",
+            "checksum": "060cdbeb08b053c7424e4ae60b93ca4b8c470decba7efa9543639319066a62b6"
+          },
+          {
+            "path": ".git/objects/68/10e671ee732bbc7b764faa065592ea3efcb451",
+            "size_bytes": 304,
+            "modified": "2026-02-06T14:38:30.856939",
+            "checksum": "06eea9cffbd380aba935bb143f8bd35e85f71ab4e0fff68b9347a87b8306f946"
+          },
+          {
+            "path": ".git/objects/6a/f64cabbdc8d3baca81df87e88435465cbdbf74",
+            "size_bytes": 192,
+            "modified": "2026-02-06T14:38:30.926104",
+            "checksum": "74e8837314938d76a3ca46911cb5883b0122b2fbab63318249eaba465f6f98fc"
+          },
+          {
+            "path": ".git/objects/6c/ac71f53172c5837933336085263f9e50ea8a2c",
+            "size_bytes": 834,
+            "modified": "2026-02-06T14:38:30.601935",
+            "checksum": "4a5062950bd26f7903051f4dc3ba33f6861fecaf66a89b67db1b24a2c73b019e"
+          },
+          {
+            "path": ".git/objects/6c/de351360335f8b33658381c422a79451b394ea",
+            "size_bytes": 525,
+            "modified": "2026-02-05T23:03:27.295279",
+            "checksum": "82115b5aef047982a4182643c867f407fbfd219c0e70c066641a0df3d9548184"
+          },
+          {
+            "path": ".git/objects/70/f887cb95680ea9710471972be195365a15a776",
+            "size_bytes": 163,
+            "modified": "2026-02-05T23:08:36.326489",
+            "checksum": "ea7259a49cd820165760efd140d3ec10e5f058c12494ebfafc8675306fc2ae22"
+          },
+          {
+            "path": ".git/objects/72/cf3960b0aab74ce922f89c1273d20cff0be4c5",
+            "size_bytes": 177,
+            "modified": "2026-02-06T14:38:30.601935",
+            "checksum": "ce7cd37d55a37f58967442e05d818b8cc80bc75b5de0804640d16a9af906d7f1"
+          },
+          {
+            "path": ".git/objects/76/05ba2f1b388be405d2fe3692051cc5879aed07",
+            "size_bytes": 115,
+            "modified": "2026-02-06T17:21:28.636204",
+            "checksum": "64bcb3d38a504f5b7a7f6953080c30fd662b6b1390e7b18558bb4d8ca8a6e3cc"
+          },
+          {
+            "path": ".git/objects/78/c36ebe82fd606b7a1af30b2c63ec4e51e33efa",
+            "size_bytes": 63,
+            "modified": "2026-02-06T17:21:28.636204",
+            "checksum": "9c84fba8bef521d609ec147eb5119bfaf63aa2dea6f2a8740150302670e6e08d"
+          },
+          {
+            "path": ".git/objects/79/2306ac60f6c600b8ded97899354557ce900f40",
+            "size_bytes": 975,
+            "modified": "2026-02-06T17:21:28.624204",
+            "checksum": "b7438a5c6e34fe6b8d1b9fd4d8201c3ca35a26f2d1d3b14084651b5f3f351e64"
+          },
+          {
+            "path": ".git/objects/7d/5dc3a940e07d456839df9163967b74fe1dfd9b",
+            "size_bytes": 164,
+            "modified": "2026-02-06T14:38:30.602935",
+            "checksum": "bcd5660c3406a0fc9c836fd1b8be07a5336e4db0becbe61d2afdb0fca3837772"
+          },
+          {
+            "path": ".git/objects/7d/6101e4509e106275e952ed5c890e4298e815f3",
+            "size_bytes": 404,
+            "modified": "2026-02-06T14:38:30.911940",
+            "checksum": "b35ed8a703d0dbb68ec1f00b08eb30167d8c4ecc6e851c5ac7b91a2a8a01a8bc"
+          },
+          {
+            "path": ".git/objects/7e/72d7a86cc57b48608f3ad60edfd454f839e0b3",
+            "size_bytes": 175,
+            "modified": "2026-02-06T14:38:30.595935",
+            "checksum": "8c73a06f6f7539e0c7f3dd19a39800982a8bf8585aca0d2d172d568235d4e377"
+          },
+          {
+            "path": ".git/objects/80/21d38af8274884b67143a0d64574801ed22a9c",
+            "size_bytes": 832,
+            "modified": "2026-02-06T14:38:30.599935",
+            "checksum": "45b387bd56c6c5c5164be5332f5509151dd114a5b75681742d3a1dc64559f62a"
+          },
+          {
+            "path": ".git/objects/84/6be0bd4719f8bf6d1ec95fc0ff612653d72068",
+            "size_bytes": 184,
+            "modified": "2026-02-06T14:38:18.515746",
+            "checksum": "f1f39141ceffe7109a3d71534973807eacf73bcf06f4a9568df9a600d956a82e"
+          },
+          {
+            "path": ".git/objects/85/4b7436870fd521051c75d0e5d8788ebc0534f0",
+            "size_bytes": 804,
+            "modified": "2026-02-06T14:38:30.833938",
+            "checksum": "083ebea8dbe97e72b5ff8a2f7ea638844a0e783f58b8b1f86ae260045d48911a"
+          },
+          {
+            "path": ".git/objects/88/1199c7c7f51fd621782fa447e48ed8d591e061",
+            "size_bytes": 404,
+            "modified": "2026-02-06T14:38:30.931108",
+            "checksum": "334d84e462d1185a9f453a0e99b75c1cbfc2c3a75310a4088fb3bbc6ab489881"
+          },
+          {
+            "path": ".git/objects/88/7a5a8f5e86e42e0bb56818446327484caa9243",
+            "size_bytes": 4093,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "cc1c6d4d94b77c12c69467a8303008a79e4a3dec7aeb0e98479bb3ddf879e1de"
+          },
+          {
+            "path": ".git/objects/88/a6c2ef132fd99a225c6b533ae9872999c0af5e",
+            "size_bytes": 203,
+            "modified": "2026-02-06T14:38:30.596935",
+            "checksum": "506175aa11c91b4ac27b5ece29d1f5dd3ec24097f8aadbe1454628b0f68c2ab6"
+          },
+          {
+            "path": ".git/objects/8a/ea22d4dc30cf271f48e46a4d62c1645ff16911",
+            "size_bytes": 1461,
+            "modified": "2026-02-06T14:38:30.854939",
+            "checksum": "010889a1341ba9ba3e06da3c677f65d18237dfdaa137aa19a1431ed3fbcc34f5"
+          },
+          {
+            "path": ".git/objects/8e/7807a45b0e02b499480adf38a70a2f167ad705",
+            "size_bytes": 457,
+            "modified": "2026-02-05T23:03:27.294278",
+            "checksum": "5b55944189dc8ae505c9dbd6bd59d15cf5fdcd58cb43c043a537311740f14f75"
+          },
+          {
+            "path": ".git/objects/91/2f6175d539674c4fd150eb56e4e9657218eefb",
+            "size_bytes": 200,
+            "modified": "2026-02-06T14:38:30.593935",
+            "checksum": "6f074a79cc6612cfa989d01b6b6fd96ac11454509fb402f7ce6b20f63bc622b0"
+          },
+          {
+            "path": ".git/objects/91/7e2fa86ccb01bab7227e223555daa1f5a76ebc",
+            "size_bytes": 561,
+            "modified": "2026-02-06T17:21:28.624204",
+            "checksum": "a3dfa12939c76348cd84500379d7d43a2ad36f282289c2b5b7bd3f6c72435ff0"
+          },
+          {
+            "path": ".git/objects/93/5b8a8b5e3b31addf4a64d3aff8fb5e2508e7a1",
+            "size_bytes": 183,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "d4fecbdbc90035d42255a21d0b1e69c560d713c638157c939b7a92072799f21b"
+          },
+          {
+            "path": ".git/objects/95/be5b22e4affb06246de5d70809d4a8402f7b0e",
+            "size_bytes": 205,
+            "modified": "2026-02-06T17:21:28.640252",
+            "checksum": "7d79400dd585b3ff351f8e660befd2a24e60d2300ed07c4208557c4766c0f9bb"
+          },
+          {
+            "path": ".git/objects/9b/5f90a8561e4e3446f2f7e7d423c8258f1c0875",
+            "size_bytes": 1181,
+            "modified": "2026-02-06T14:38:30.833938",
+            "checksum": "c35971a93b4f42a9c4339d69ed3c4f81472e5f835bf7a1a8e6535a6eb3b6b71f"
+          },
+          {
+            "path": ".git/objects/9d/28fdf81f377d621745ad7b35bc17806aff903e",
+            "size_bytes": 328,
+            "modified": "2026-02-06T14:32:26.701262",
+            "checksum": "44672e37e961bc3919b5d786f65a4f274614c1bd031a4c4bbb9626e340604437"
+          },
+          {
+            "path": ".git/objects/9e/6f015d43a33081a56745ca06290adcaff1dcf5",
+            "size_bytes": 274,
+            "modified": "2026-02-06T14:38:30.839938",
+            "checksum": "71f15a18a8ae21454838f06d80c563a96716dd3ca4a43de139571fd6afdd157e"
+          },
+          {
+            "path": ".git/objects/a1/3e647150a2dc3d4573f1617a6f50f2cf24647b",
+            "size_bytes": 189,
+            "modified": "2026-02-05T23:20:42.996758",
+            "checksum": "64de608ccf451c04d3151e783c8690eda234fa403d1b4bcbca56f438313193c0"
+          },
+          {
+            "path": ".git/objects/a3/0d6eed86f28b1eb0c4890d4783fb60dd277654",
+            "size_bytes": 132,
+            "modified": "2026-02-06T17:21:28.624204",
+            "checksum": "bf2b76983847122c972b5a2ee60bc9caba795cd7561a85f45628ff98f684d76e"
+          },
+          {
+            "path": ".git/objects/a7/9701b806dee47f58d07792987f518240137aa7",
+            "size_bytes": 833,
+            "modified": "2026-02-06T14:38:30.598935",
+            "checksum": "c5c3450fb2a77ed0ff69b0515cdd80d5f989abe50847bce232852dbf2add6613"
+          },
+          {
+            "path": ".git/objects/a8/99f5cf0eb513c3a53caa8aee529c927e4acdca",
+            "size_bytes": 2921,
+            "modified": "2026-02-06T14:38:30.848938",
+            "checksum": "31358b8c3747f57d0cf60f75b06c1ed38b55d88e73483531e3eaee3afdda7cd2"
+          },
+          {
+            "path": ".git/objects/a8/e3d73dba7fa2da6b285082a45cc1e02c389d22",
+            "size_bytes": 58,
+            "modified": "2026-02-06T17:21:28.636204",
+            "checksum": "62f6233fd402278c834c0df8a6e5536564830cd412727ea28b65d0653f04842c"
+          },
+          {
+            "path": ".git/objects/aa/11deea4b01f0427c8c9205973204724f240576",
+            "size_bytes": 1978,
+            "modified": "2026-02-06T17:48:38.942398",
+            "checksum": "dfc0f465578db5d1e66201aa5aa9e9dfe60ad06d961414b447aa538494d06c08"
+          },
+          {
+            "path": ".git/objects/ab/8108429457d4247880c745564b00ee82f58443",
+            "size_bytes": 1712,
+            "modified": "2026-02-06T14:38:30.833938",
+            "checksum": "f3f86d71b5d2726ce19f178d4b396ca19b56366169b93b81212e72f42d6b4f7b"
+          },
+          {
+            "path": ".git/objects/ac/179017fa119f08270ae636663dc9ac98f0d0b9",
+            "size_bytes": 122,
+            "modified": "2026-02-06T14:27:02.469208",
+            "checksum": "7ef9de465af4314a62a886f6f0eaf10114cccf55c69f657ba4c3fd1a5da6bcec"
+          },
+          {
+            "path": ".git/objects/ad/c57a75205c6d46f8766f21f39f995aa4d9c9c0",
+            "size_bytes": 102,
+            "modified": "2026-02-05T23:03:30.844339",
+            "checksum": "bd5c4659198a7f2171415e0403a8168b6a5b5799e24f2ab2805d71b54aca4b5b"
+          },
+          {
+            "path": ".git/objects/ad/f13fa07b09c8a97cbab10019962525dd4b699d",
+            "size_bytes": 187,
+            "modified": "2026-02-05T23:16:50.904640",
+            "checksum": "defc31d3d5abad3e5dd07f793cdcbac6eef217bd372a10c27fdd516b5b68f768"
+          },
+          {
+            "path": ".git/objects/b0/9bd760a97186b733936f71144c24299a65530d",
+            "size_bytes": 847,
+            "modified": "2026-02-06T14:38:30.591935",
+            "checksum": "0be301b9e421d0f57c6c2548d9b73ea9adcf4671ccced41e41017983e70ddd71"
+          },
+          {
+            "path": ".git/objects/b0/c3f900108dacc8063a8c1078dd4112bdff2bcb",
+            "size_bytes": 224,
+            "modified": "2026-02-05T23:20:42.993729",
+            "checksum": "628034f15e86bc5a87b3a0356190d72ab23c373c9a8771f57d9c45f53edba14d"
+          },
+          {
+            "path": ".git/objects/b3/3906bdb64145597a532e14fc6228a297ec3fd5",
+            "size_bytes": 466,
+            "modified": "2026-02-06T17:34:35.673368",
+            "checksum": "e4f0d7bdf477d735ee7474a75284fb20c15b793c5379e4f4f8f00cede1fd0f04"
+          },
+          {
+            "path": ".git/objects/b4/c236690c23ff24b83d41f84ac824bfee0a09de",
+            "size_bytes": 856,
+            "modified": "2026-02-06T14:38:30.589935",
+            "checksum": "34e0857abc2000364872997aa706d9a454abb6cfe63145cb2a5bfc1cd00059d6"
+          },
+          {
+            "path": ".git/objects/b6/e153823cad730bf0dfaad8fb970d78500b3a39",
+            "size_bytes": 88,
+            "modified": "2026-02-06T14:38:30.830938",
+            "checksum": "ba1336a139433d8be8992a8c26a8bc2b9e8a6fe3cae77ad4ac8fd9324feccdcc"
+          },
+          {
+            "path": ".git/objects/b8/b3cf41bd91e886be9fdcacbe99846094684aef",
+            "size_bytes": 2922,
+            "modified": "2026-02-06T14:38:30.852939",
+            "checksum": "5eec72a8697ead1d49f35d817c1bc011124b91a41aa208b0b8f8e58bb3a9a688"
+          },
+          {
+            "path": ".git/objects/b9/4ec0e70481cc4a75c39fa222cfca162b3d8b5c",
+            "size_bytes": 273,
+            "modified": "2026-02-06T14:38:30.846939",
+            "checksum": "dcf31d4694c245c04f6929c7916ea95f2e803ff9a91b159220a1450b80e90ddc"
+          },
+          {
+            "path": ".git/objects/b9/ec8eaf4b260fad9b5020424656674a4fc089bc",
+            "size_bytes": 206,
+            "modified": "2026-02-06T14:38:30.598935",
+            "checksum": "e928ec6549953420028f9fcbf18de4d41e4bcfd839df17ded74b8090329bbd23"
+          },
+          {
+            "path": ".git/objects/ba/733620caec491d9cdbb05d609733e85d72fd67",
+            "size_bytes": 202,
+            "modified": "2026-02-06T17:34:35.675414",
+            "checksum": "d5b7fe5d529565749755ae308df44b4b1f8c499517ce6e9cb7dc4575c665e489"
+          },
+          {
+            "path": ".git/objects/bb/134ae60790e869644b0fd72b5ef8d5c50c437c",
+            "size_bytes": 122,
+            "modified": "2026-02-05T23:20:42.994729",
+            "checksum": "ce01e795b01ed20b9f105339f78e40b5733bc7feac3463ab19193e5a21e29c44"
+          },
+          {
+            "path": ".git/objects/be/9c523eee85cfd3f5c7ca750a4edebe41396007",
+            "size_bytes": 1400,
+            "modified": "2026-02-06T17:34:29.710276",
+            "checksum": "19995a56462369adae4ce9ef869a5689db47d38a4c034919ac52129227b368db"
+          },
+          {
+            "path": ".git/objects/c1/93ce0fa08447b7715cf7809e8e6a2f713d2be6",
+            "size_bytes": 277,
+            "modified": "2026-02-05T23:03:27.295279",
+            "checksum": "b4fae1ca0a90f203d4637a8de7ca62a52d681cf06c1598c3b6fa1097e895ca6c"
+          },
+          {
+            "path": ".git/objects/c2/ee5c5538ad3300b72e9fee034947ab1615dde2",
+            "size_bytes": 362,
+            "modified": "2026-02-05T23:03:30.845339",
+            "checksum": "72fcb49629038cfd760695c5b86220050dc18241eeecd1b1e989aa1210644f04"
+          },
+          {
+            "path": ".git/objects/c8/c089f3a1ee001d3caf172682bd167462a8eb1c",
+            "size_bytes": 431,
+            "modified": "2026-02-06T14:38:30.596935",
+            "checksum": "7a93281e269aaf79b9bff11aa1a52143c648450698430c29cf163493c22d5721"
+          },
+          {
+            "path": ".git/objects/cd/c3f568b21d875dcf98d78cdf63c87b77d7c9dc",
+            "size_bytes": 527,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "37d4d88b964059370fc861e15118bd3a256c7b7525e224cb0507e41f52af8186"
+          },
+          {
+            "path": ".git/objects/cd/c86b5b31ab2f4a4ef7117ec95c4510b1f9a6e7",
+            "size_bytes": 1129,
+            "modified": "2026-02-05T23:03:27.295279",
+            "checksum": "baa72d61636a0075d1e75256d25d362f53fe3aaee7cddeb4882073accae3d6ac"
+          },
+          {
+            "path": ".git/objects/cf/c4c31a6fbbed2422e70d0beabf6f31d1b05e9c",
+            "size_bytes": 274,
+            "modified": "2026-02-06T14:38:30.835938",
+            "checksum": "886e5fa8661022474dbeecbd444d144d40021b758068e85e9aa6cea057d17941"
+          },
+          {
+            "path": ".git/objects/d1/59d518d94273dec9adb1109ac384237c40447b",
+            "size_bytes": 190,
+            "modified": "2026-02-06T14:32:26.705610",
+            "checksum": "30b6b0d7949fde3dbfe2bd0dbebeb72b4fb925a2b96146547f2dfb0ef9d87f3e"
+          },
+          {
+            "path": ".git/objects/d6/6ad1d5b3160c4c18a423a77836936e3123ca43",
+            "size_bytes": 303,
+            "modified": "2026-02-06T14:38:30.831938",
+            "checksum": "cd0b5f35ba292657623ae7f2acbd257d8a78f955084fd42a17f05d6ab2eab852"
+          },
+          {
+            "path": ".git/objects/d8/5d83d0c6e408b1d1a8397760e7834d0e6aaf37",
+            "size_bytes": 151,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "7a7d781029896fb46bda5966038e476f41145ab2a2d1c3dca607d90512989f4a"
+          },
+          {
+            "path": ".git/objects/dd/b9453529e340a00e4700777934cfc9c5469348",
+            "size_bytes": 274,
+            "modified": "2026-02-06T14:38:30.840939",
+            "checksum": "41c87fa5b040b5dcd4264ec5dfc1bf3e37770f534e4e25c951244eb24a55dc1c"
+          },
+          {
+            "path": ".git/objects/e2/d45196d4e8810496fdd8e8eea82d96f8def8bc",
+            "size_bytes": 465,
+            "modified": "2026-02-06T17:21:28.637205",
+            "checksum": "64046621825c27f825f8fd9025999cd358fc72e743e7096954124ed08f820304"
+          },
+          {
+            "path": ".git/objects/e4/078d152adfaabca527442a6211a58c52a4d01c",
+            "size_bytes": 274,
+            "modified": "2026-02-06T14:38:30.850939",
+            "checksum": "deac832bff9f712e7e8991c294339c4d30ce5a48d45e43898be3d24ec013f7c4"
+          },
+          {
+            "path": ".git/objects/e6/bbbc4a087fdd52331b000cd960349cfd41a499",
+            "size_bytes": 91,
+            "modified": "2026-02-06T17:21:28.623204",
+            "checksum": "ab9ccffc9079af4c99faa71f5acb371f6542f110955c91043224c447afff3861"
+          },
+          {
+            "path": ".git/objects/e8/88f5d425a28e4fad393df07ec547938ca7543c",
+            "size_bytes": 88,
+            "modified": "2026-02-06T14:38:30.822938",
+            "checksum": "c99a96ac9899bb4f5470e1d28e46d4e462b14f00650f372c3e1a52a033fedb3b"
+          },
+          {
+            "path": ".git/objects/e8/a34c634bd3b4c74aa4d88ebd9bba584c2ac4c8",
+            "size_bytes": 4580,
+            "modified": "2026-02-06T14:38:30.824938",
+            "checksum": "ba4c8f592f81f38c3677a284b471c4dda441d61411bd7fc67f03a98ca93d13a9"
+          },
+          {
+            "path": ".git/objects/ed/2b071b5972a7119660367748fbce71ff8c8b13",
+            "size_bytes": 189,
+            "modified": "2026-02-06T14:38:30.597935",
+            "checksum": "a305ff18b45065501b915e5a91f9e32147ef1e58dcd59506b30dc6736bc5d137"
+          },
+          {
+            "path": ".git/objects/ef/03a4a830cef9da750b855ff3dc3ca79863e87d",
+            "size_bytes": 163,
+            "modified": "2026-02-06T17:21:28.636204",
+            "checksum": "7434bacaf6a6fd338c2b7aac6b043011c9cef97575a9493293bb96044f6f6c33"
+          },
+          {
+            "path": ".git/objects/ef/e9f68dca8c7cdb88b6bf9dcd550993c73363c8",
+            "size_bytes": 192,
+            "modified": "2026-02-06T14:38:30.590935",
+            "checksum": "2999e5ba692783c3cedcb22de9a9f2577afbf32f621c39f1c7b03c90f68956ee"
+          },
+          {
+            "path": ".git/objects/f1/5ec334969103580cd643d0c61110c28a6fad1d",
+            "size_bytes": 273,
+            "modified": "2026-02-06T14:38:30.853939",
+            "checksum": "c090f1616ee74246d55e5500c485c8ead6c27d19402e5236a36ad98eab463745"
+          },
+          {
+            "path": ".git/objects/f5/abff147b6e24268b9d05f3f0876ee729917d51",
+            "size_bytes": 274,
+            "modified": "2026-02-06T14:38:30.834938",
+            "checksum": "2c9a781eed0a90fbef6f3721d69ab4aa63d00a059d66b9e786d7a8a877e8a61d"
+          },
+          {
+            "path": ".git/objects/fd/77ae6d06a844bd781c97088fd37dd0794690c5",
+            "size_bytes": 114,
+            "modified": "2026-02-05T23:03:30.842339",
+            "checksum": "cdcd670fbbf9bead0e162fe9b74c4a78ed25b45192218626be05c3533ea3ad8e"
+          },
+          {
+            "path": ".git/objects/fd/a06ea924df4d93abf5492ca8db073686c95ec3",
+            "size_bytes": 690,
+            "modified": "2026-02-06T14:38:30.603935",
+            "checksum": "6a66c3c8d000e648b8ca257cba61edb10aacb8c23ca799c21fb32cd300935f4c"
+          },
+          {
+            "path": ".git/objects/fe/c2493c015388980d55c59d412c18ed94f59874",
+            "size_bytes": 2946,
+            "modified": "2026-02-06T14:38:30.843939",
+            "checksum": "6b747cef300a9c051eab3298e30b24395c273559d9509886b6116ffb13deaa8b"
+          },
+          {
+            "path": ".git/refs/heads/main",
+            "size_bytes": 41,
+            "modified": "2026-02-06T17:48:45.751503",
+            "checksum": "fb1f55c040ea0809e0b6926b7c71a66ee3c076c5a07854e3256b808b36b25422"
+          },
+          {
+            "path": ".git/refs/remotes/origin/main",
+            "size_bytes": 41,
+            "modified": "2026-02-06T14:38:33.976987",
+            "checksum": "a476601e619dbae52e36a85679007b21072c8e605b8cb89611b835dd097bd03f"
+          }
+        ],
+        "file_count": 141,
+        "total_size_bytes": 124493,
+        "total_size_human": "121.6 KB"
+      }
+    },
+    "total_files": 177,
+    "total_size_bytes": 404361,
+    "total_size_human": "0.4 MB"
+  },
+  "checksum": "bdf45a179f1ba8e69868d804218dc04dfb4054ad3f5e629e79826781a5b6b340"
+}
