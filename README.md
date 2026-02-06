@@ -12,6 +12,7 @@ This is the public landing page for **ClawOps** - production-ready OpenClaw oper
 | [ai-providers.html](./ai-providers.html) | AI provider recommendations |
 | [channels.html](./channels.html) | Supported channels overview |
 | [use-cases.html](./use-cases.html) | Curated enterprise use cases |
+| [case-studies.html](./case-studies.html) | How we use ClawOps internally |
 
 ## 🎯 What We Do
 
