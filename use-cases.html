@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases | ClawOps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(to right, #fb923c, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin: 2rem 0 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .card { background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; padding: 1.5rem; }
+        .card:hover { border-color: rgba(249,115,22,0.5); }
+        .badge { display: inline-block; padding: 0.25rem 0.5rem; font-size: 0.625rem; font-weight: 600; text-transform: uppercase; color: #22c55e; background: rgba(34,197,94,0.1); border-radius: 0.25rem; margin-bottom: 0.5rem; }
+        .card h3 { font-size: 1rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .card p { font-size: 0.875rem; color: #94a3b8; }
+        a { color: #fb923c; text-decoration: none; }
+        .back { display: inline-block; margin-bottom: 2rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back">← Back to ClawOps</a>
+    <h1>Use Cases</h1>
+    <p style="color: #94a3b8; margin-bottom: 2rem;">Production-ready AI automations for every channel.</p>
+    
+    <h2>Messaging</h2>
+    <div class="grid">
+        <div class="card"><span class="badge">Email</span><h3>Chat with Mailbox</h3><p>Query emails via Telegram/WhatsApp. "Show unread from this week."</p></div>
+        <div class="card"><span class="badge">Calendar</span><h3>Meeting Scheduler</h3><p>Book meetings via chat. "Book 30min with John tomorrow."</p></div>
+        <div class="card"><span class="badge">Slack</span><h3>Daily Standup Bot</h3><p>Automated standup summaries across teams.</p></div>
+    </div>
+    
+    <h2>Reporting</h2>
+    <div class="grid">
+        <div class="card"><span class="badge">Weekly</span><h3>Executive Summaries</h3><p>AI-generated weekly board reports.</p></div>
+        <div class="card"><span class="badge">Finance</span><h3>Cost Reports</h3><p>AWS/Cloud spend monitoring and alerts.</p></div>
+        <div class="card"><span class="badge">Sales</span><h3>Pipeline Updates</h3><p>Daily CRM pipeline summaries.</p></div>
+    </div>
+    
+    <h2>Engineering</h2>
+    <div class="grid">
+        <div class="card"><span class="badge">Deploy</span><h3>Chat Deployments</h3><p>Deploy via chat. "Deploy v1.2 to staging."</p></div>
+        <div class="card"><span class="badge">Monitor</span><h3>Health Checks</h3><p>System status via chat. "Is the API healthy?"</p></div>
+        <div class="card"><span class="badge">GitHub</span><h3>PR Review</h3><p>Automated PR summaries and reviews.</p></div>
+    </div>
+    
+    <p style="margin-top: 2rem;"><a href="mailto:akshay@dooziesoft.com">Request Custom Use Case →</a></p>
+</body>
+</html>
