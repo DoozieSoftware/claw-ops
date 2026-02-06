@@ -22,9 +22,10 @@ This is the public landing page for **ClawOps** - production-ready OpenClaw oper
 
 ## 💰 Pricing
 
-- **QuickStart**: $499
-- **Enterprise**: $2,499
-- **Care**: $499/mo
+- **QuickStart**: $99 (1 channel, 1 use case)
+- **Starter**: $199 (1 channel, 3 use cases)
+- **Business**: $499 (all defaults, all channels)
+- **Custom**: Quote for more
 
 AI API costs billed by provider, not included.
 
