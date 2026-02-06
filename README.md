@@ -25,7 +25,7 @@ We believe in **Engineering as Marketing**. These templates prove we know what w
 
 If you need **managed hosting, upgrades, and 24/7 monitoring**, we offer **ClawOps Care** ($199/mo).
 
-🔗 **[Visit ClawOps](http://your-domain.com)** | 📧 **Contact: akshay@example.com**
+🔗 **[Visit ClawOps](http://your-domain.com)** | 📧 **Contact: akshay@dooziesoft.com**
 
 ---
 
