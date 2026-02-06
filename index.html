@@ -4,142 +4,342 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClawOps | Production-Grade OpenClaw Operations</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        /* Background Orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: -1;
+        }
+        .orb-1 {
+            top: -10%; left: -10%;
+            width: 50%; height: 50%;
+            background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%);
+        }
+        .orb-2 {
+            top: 20%; right: -10%;
+            width: 40%; height: 40%;
+            background: radial-gradient(circle, rgba(239,68,68,0.15) 0%, transparent 70%);
+        }
+        .orb-3 {
+            bottom: -10%; left: 20%;
+            width: 50%; height: 50%;
+            background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 48rem;
+            margin: 0 auto;
+            padding: 5rem 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 3.75rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fb923c, #ef4444, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h2 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+        h3 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        
+        /* Header */
+        header { margin-bottom: 4rem; }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #fb923c;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            background: rgba(249, 115, 22, 0.1);
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        .subtitle span { color: #f8fafc; }
+        
+        /* GitHub Link */
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .github-link:hover {
+            background: #1e293b;
+            border-color: rgba(249, 115, 22, 0.5);
+            color: #fff;
+        }
+        .github-link svg { width: 1.25rem; height: 1.25rem; }
+        
+        /* Sections */
+        section { margin-bottom: 3rem; }
+        .problem-text { font-size: 1.125rem; color: #94a3b8; margin-bottom: 1rem; }
+        .problem-highlight { color: #fdba74; opacity: 0.8; }
+        
+        /* Cards Grid */
+        .grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
+        @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+        
+        .card {
+            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid #1e293b;
+            border-radius: 1rem;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            border-color: rgba(249, 115, 22, 0.5);
+            background: rgba(15, 23, 42, 0.6);
+            transform: translateY(-2px);
+        }
+        .card-icon {
+            width: 2.5rem; height: 2.5rem;
+            border-radius: 0.5rem;
+            background: rgba(249, 115, 22, 0.1);
+            color: #fb923c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .card-icon svg { width: 1.5rem; height: 1.5rem; }
+        .card-text { font-size: 0.875rem; color: #94a3b8; line-height: 1.7; }
+        
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
+        @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+        
+        .price-card {
+            padding: 2rem;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid #1e293b;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+        .price-card:hover { transform: scale(1.02); }
+        .price-card.featured {
+            background: rgba(15, 23, 42, 0.6);
+            border: 2px solid rgba(239, 68, 68, 0.5);
+            position: relative;
+        }
+        .featured-badge {
+            position: absolute;
+            top: 0; right: 0;
+            background: #ef4444;
+            color: white;
+            font-size: 0.625rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0 0.75rem 0 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .price-title { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .price-desc { font-size: 0.875rem; color: #94a3b8; margin-bottom: 2rem; flex-grow: 1; }
+        .price-amount { font-size: 1.875rem; font-weight: 800; color: #fb923c; }
+        .price-period { font-size: 0.875rem; color: #64748b; }
+        .price-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+        
+        /* CTA Button */
+        .cta-container { margin-bottom: 3rem; }
+        .cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(to right, #ea580c, #dc2626);
+            color: white;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
+        }
+        .cta:hover {
+            background: linear-gradient(to right, #fb923c, #ef4444);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            padding-top: 3rem;
+            border-top: 1px solid #1e293b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            footer { flex-direction: row; justify-content: space-between; }
+        }
+        .footer-made { color: #94a3b8; font-weight: 500; margin-bottom: 0.5rem; }
+        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+        .tech-tag {
+            padding: 0.25rem 0.75rem;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid #334155;
+            border-radius: 9999px;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.3s;
+        }
+        .tech-tag:hover {
+            background: #1e293b;
+            border-color: rgba(249, 115, 22, 0.5);
+            color: #fb923c;
+        }
+        .footer-by { font-size: 0.75rem; color: #64748b; margin-top: 0.5rem; text-align: center; }
+        @media (min-width: 768px) { .footer-by { text-align: right; } }
+        .footer-by a { color: #94a3b8; text-decoration: none; }
+        .footer-by a:hover { color: #fb923c; }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans leading-relaxed relative overflow-x-hidden">
-    <!-- Background Decoration -->
-    <div style="position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;">
-        <div style="position: absolute; top: -10%; left: -10%; width: 50%; height: 50%; background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(80px);"></div>
-        <div style="position: absolute; top: 20%; right: -10%; width: 40%; height: 40%; background: radial-gradient(circle, rgba(239,68,68,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(80px);"></div>
-        <div style="position: absolute; bottom: -10%; left: 20%; width: 50%; height: 50%; background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%); border-radius: 50%; filter: blur(80px);"></div>
-    </div>
+<body>
+    <!-- Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
 
-    <div class="max-w-3xl mx-auto px-6 py-20 relative z-10">
-        <header class="mb-16">
-            <span class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-widest text-orange-400 uppercase border rounded-full border-orange-500/30 bg-orange-500/10">
-                Production-Grade
-            </span>
-            <h1 class="text-6xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-red-500 to-amber-500">
-                ClawOps
-            </h1>
-            <p class="text-2xl text-slate-400 font-medium max-w-2xl">
-                Production-ready OpenClaw, <span class="text-slate-200">without the infrastructure babysitting.</span>
+    <div class="container">
+        <header>
+            <span class="badge">Production-Grade</span>
+            <h1>ClawOps</h1>
+            <p class="subtitle">
+                Production-ready OpenClaw, <span>without the infrastructure babysitting.</span>
             </p>
-            <div class="mt-6">
-                <a href="https://github.com/DoozieSoftware/claw-ops" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 hover:border-orange-500/50 transition-all duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    <span class="text-sm font-medium">View on GitHub</span>
-                </a>
-            </div>
+            <a href="https://github.com/DoozieSoftware/claw-ops" target="_blank" class="github-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                View on GitHub
+            </a>
         </header>
 
-        <section class="mb-12">
-            <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">The Problem</h2>
-            <div class="space-y-4 text-lg">
-                <p>OpenClaw is powerful, but production is unforgiving. Unsafe defaults, silent failures, and breaking upgrades turn your AI workforce into an ops nightmare.</p>
-                <p class="font-medium text-orange-200/50">Documentation is not accountability. We are.</p>
-            </div>
+        <section>
+            <h2>The Problem</h2>
+            <p class="problem-text">OpenClaw is powerful, but production is unforgiving. Unsafe defaults, silent failures, and breaking upgrades turn your AI workforce into an ops nightmare.</p>
+            <p class="problem-text problem-highlight">Documentation is not accountability. We are.</p>
         </section>
 
-        <section class="mb-12">
-            <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">What We Deliver</h2>
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <li class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-orange-500/50 hover:bg-slate-900/60 shadow-2xl backdrop-blur-sm">
-                    <div class="w-10 h-10 mb-4 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
+        <section>
+            <h2>What We Deliver</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
-                    <strong class="block mb-2 text-lg font-bold text-slate-100">Hardened Setup</strong>
-                    <span class="text-sm text-slate-400 leading-relaxed">VPS/Docker deployment with security-first defaults.</span>
-                </li>
-                <li class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-red-500/50 hover:bg-slate-900/60 shadow-2xl backdrop-blur-sm">
-                    <div class="w-10 h-10 mb-4 rounded-lg bg-red-500/10 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                    </div>
-                    <strong class="block mb-2 text-lg font-bold text-slate-100">Upgrade Safety</strong>
-                    <span class="text-sm text-slate-400 leading-relaxed">Version pinning and controlled rollouts. No silent breakage.</span>
-                </li>
-                <li class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-amber-500/50 hover:bg-slate-900/60 shadow-2xl backdrop-blur-sm">
-                    <div class="w-10 h-10 mb-4 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <strong class="block mb-2 text-lg font-bold text-slate-100">Managed Health</strong>
-                    <span class="text-sm text-slate-400 leading-relaxed">Active monitoring, crash diagnostics, and minor tuning.</span>
-                </li>
-                <li class="group p-6 bg-slate-900/40 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-red-500/50 hover:bg-slate-900/60 shadow-2xl backdrop-blur-sm">
-                    <div class="w-10 h-10 mb-4 rounded-lg bg-red-500/10 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                    </div>
-                    <strong class="block mb-2 text-lg font-bold text-slate-100">Runbook Delivery</strong>
-                    <span class="text-sm text-slate-400 leading-relaxed">Environment-specific docs for your team.</span>
-                </li>
-            </ul>
-        </section>
-
-        <section class="mb-16">
-            <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">Offerings (Lean Ops)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="flex flex-col p-8 bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-300 hover:scale-[1.02] shadow-xl">
-                    <h3 class="font-bold text-xl text-slate-100 mb-2">QuickStart</h3>
-                    <p class="text-sm text-slate-400 mb-8 flex-grow">Local/VPS install with baseline config.</p>
-                    <div class="mt-auto">
-                        <span class="block font-extrabold text-3xl text-orange-400 mb-1">$99</span>
-                        <span class="text-xs text-slate-500 uppercase tracking-wider">One-time</span>
-                    </div>
+                    <h3>Hardened Setup</h3>
+                    <p class="card-text">VPS/Docker deployment with security-first defaults.</p>
                 </div>
-                <div class="flex flex-col p-8 bg-slate-900/60 border-2 border-red-500/50 rounded-3xl transition-all duration-300 hover:scale-[1.02] shadow-[0_0_30px_rgba(239,68,68,0.1)] relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-widest">
-                        Recommended
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(239,68,68,0.1); color: #ef4444;">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                     </div>
-                    <h3 class="font-bold text-xl text-slate-100 mb-2">Production Hardening</h3>
-                    <p class="text-sm text-slate-400 mb-8 flex-grow">Dockerized, secured, with rollback plan.</p>
-                    <div class="mt-auto">
-                        <span class="block font-extrabold text-3xl text-red-400 mb-1">$399+</span>
-                        <span class="text-xs text-slate-500 uppercase tracking-wider">One-time</span>
-                    </div>
+                    <h3>Upgrade Safety</h3>
+                    <p class="card-text">Version pinning and controlled rollouts. No silent breakage.</p>
                 </div>
-                <div class="flex flex-col p-8 bg-slate-900/40 border border-slate-800 rounded-3xl transition-all duration-300 hover:scale-[1.02] shadow-xl">
-                    <h3 class="font-bold text-xl text-slate-100 mb-2">ClawOps Care</h3>
-                    <p class="text-sm text-slate-400 mb-8 flex-grow">Monthly maintenance, upgrades, and support.</p>
-                    <div class="mt-auto">
-                        <div class="flex items-baseline gap-1 mb-1">
-                            <span class="font-extrabold text-3xl text-amber-400">$199</span>
-                            <span class="text-sm text-slate-500">/mo</span>
-                        </div>
-                        <span class="text-xs text-slate-500 uppercase tracking-wider">Subscription</span>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(245,158,11,0.1); color: #f59e0b;">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     </div>
+                    <h3>Managed Health</h3>
+                    <p class="card-text">Active monitoring, crash diagnostics, and minor tuning.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(168,85,247,0.1); color: #a855f7;">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
+                    <h3>Runbook Delivery</h3>
+                    <p class="card-text">Environment-specific docs for your team.</p>
                 </div>
             </div>
         </section>
 
-        <footer class="pt-12 border-t border-slate-800">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                <div>
-                    <p class="text-slate-400 mb-2">Ready for boring reliability?</p>
-                    <a href="mailto:akshay@dooziesoft.com" class="inline-block bg-gradient-to-r from-orange-600 to-red-600 text-white px-10 py-4 rounded-xl font-bold hover:from-orange-500 hover:to-red-500 transition-all duration-300 shadow-[0_10px_20px_rgba(249,115,22,0.2)] hover:shadow-[0_10px_25px_rgba(249,115,22,0.3)] hover:-translate-y-1">
-                        Contact Spokesman
-                    </a>
+        <section>
+            <h2>Offerings (Lean Ops)</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3 class="price-title">QuickStart</h3>
+                    <p class="price-desc">Local/VPS install with baseline config.</p>
+                    <div class="price-amount">$99<span class="price-period">/one-time</span></div>
                 </div>
-                <div class="text-left md:text-right">
-                    <p class="text-sm text-slate-400 font-medium mb-3">Built with ❤️ using</p>
-                    <div class="flex flex-wrap justify-end gap-3 text-sm">
-                        <a href="https://openclaw.ai" target="_blank" class="px-3 py-1 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 hover:border-orange-500/50 rounded-full text-slate-300 hover:text-orange-400 transition-all duration-300">OpenClaw</a>
-                        <span class="text-slate-600">+</span>
-                        <a href="https://kimi.ai" target="_blank" class="px-3 py-1 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 hover:border-blue-500/50 rounded-full text-slate-300 hover:text-blue-400 transition-all duration-300">Kimi k2.5</a>
-                        <span class="text-slate-600">+</span>
-                        <a href="https://jules.ai" target="_blank" class="px-3 py-1 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 hover:border-purple-500/50 rounded-full text-slate-300 hover:text-purple-400 transition-all duration-300">Google Jules</a>
-                    </div>
-                    <p class="text-xs text-slate-600 mt-2">with love by <a href="https://dooziesoft.com" target="_blank" class="text-slate-400 hover:text-orange-400 transition-colors">DoozieSoft</a></p>
+                <div class="price-card featured">
+                    <span class="featured-badge">Recommended</span>
+                    <h3 class="price-title">Production Hardening</h3>
+                    <p class="price-desc">Dockerized, secured, with rollback plan.</p>
+                    <div class="price-amount">$399+<span class="price-period">/one-time</span></div>
                 </div>
+                <div class="price-card">
+                    <h3 class="price-title">ClawOps Care</h3>
+                    <p class="price-desc">Monthly maintenance, upgrades, and support.</p>
+                    <div class="price-amount">$199<span class="price-period">/mo</span></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-container">
+            <a href="mailto:akshay@dooziesoft.com" class="cta">Contact Spokesman</a>
+        </div>
+
+        <footer>
+            <div>
+                <p class="footer-made">Ready for boring reliability?</p>
+            </div>
+            <div>
+                <p class="footer-made" style="margin-bottom: 0.5rem;">Built with ❤️ using</p>
+                <div class="footer-links">
+                    <a href="https://openclaw.ai" target="_blank" class="tech-tag">OpenClaw</a>
+                    <span style="color: #64748b;">+</span>
+                    <a href="https://kimi.ai" target="_blank" class="tech-tag">Kimi k2.5</a>
+                    <span style="color: #64748b;">+</span>
+                    <a href="https://jules.ai" target="_blank" class="tech-tag">Google Jules</a>
+                </div>
+                <p class="footer-by">with love by <a href="https://dooziesoft.com" target="_blank">DoozieSoft</a></p>
             </div>
         </footer>
     </div>
