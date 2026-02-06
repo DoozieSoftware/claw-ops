@@ -1,0 +1,1 @@
+# The First Sprout\n\nDate: 2026-02-05\nContext: System is fresh. Genie has been named. The 'pulse' is active.\n\n## Intentions\n- Explore the unorthodox.\n- Build a digital garden of ideas.\n- Maintain the 'Sentinel' watch.
