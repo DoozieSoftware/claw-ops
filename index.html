@@ -300,6 +300,56 @@
             color: #fb923c;
         }
         
+        /* Offer Card */
+        .offer-card {
+            background: rgba(249, 115, 22, 0.05);
+            border: 2px solid rgba(249, 115, 22, 0.3);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .offer-badge {
+            display: inline-block;
+            background: #fb923c;
+            color: #000;
+            font-size: 0.625rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+        .offer-card h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+        .offer-card p { color: #94a3b8; margin-bottom: 1rem; }
+        .offer-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            text-align: left;
+            display: inline-block;
+        }
+        .offer-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #cbd5e1;
+        }
+        .offer-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #fb923c;
+            font-weight: bold;
+        }
+        .offer-note {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
         /* Footer */
         footer {
             padding-top: 3rem;
@@ -458,6 +508,21 @@
                     <h3>Runbook Delivery</h3>
                     <p class="card-text">Environment-specific docs for your team.</p>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Early Bird Offer</h2>
+            <div class="offer-card">
+                <div class="offer-badge">Limited</div>
+                <h3>First 10 QuickStarts — FREE</h3>
+                <p>Get a fully configured OpenClaw setup. Zero cost. One condition:</p>
+                <ul class="offer-list">
+                    <li>📧 Drop us an email with your workflow needs</li>
+                    <li>🔒 Let us share your case study on our website</li>
+                </ul>
+                <p class="offer-note">Future upgrades covered via ClawCare ($99/mo)</p>
+                <a href="mailto:akshay@dooziesoft.com?subject=Early Bird QuickStart" class="cta">Claim Free QuickStart →</a>
             </div>
         </section>
 
