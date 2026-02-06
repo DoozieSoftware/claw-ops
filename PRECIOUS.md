@@ -29,8 +29,8 @@
 │   │     └── clients/ ← All client data                          │    │
 │   │        ├── acme-corp/                                       │    │
 │   │        │   ├── client.yaml                                  │    │
-│   │        │   ├── credentials.yaml                             │    │
-│   │        │   └── tokens.json                                  │    │
+│   │        │   ├── credentials.yaml                              │    │
+│   │        │   └── tokens.json                                 │    │
 │   │        └── ...                                              │    │
 │   │                                                             │    │
 │   └─────────────────────────────────────────────────────────────┘    │
@@ -39,13 +39,39 @@
 │   │  🛠️ YOUR TOOLS                                             │    │
 │   │                                                             │    │
 │   │  📁 scripts/                                                │    │
-│   │     ├── workspace_preserver.py ← PROTECT EVERYTHING!      │    │
-│   │     ├── backup_manager.py ← Daily backups                  │    │
+│   │     ├── workspace_preserver.py ← PROTECT EVERYTHING!       │    │
+│   │     ├── backup_manager.py ← Daily backups                   │    │
 │   │     ├── client_vault.py ← Client management                 │    │
-│   │     ├── soul_validator.py ← SOUL validation                  │    │
-│   │     ├── immutability_manager.py ← Security lockdown         │    │
+│   │     ├── soul_validator.py ← SOUL validation                   │    │
+│   │     ├── immutability_manager.py ← Security lockdown          │    │
 │   │     ├── update_manager.py ← Create updates                   │    │
 │   │     └── ...                                                  │    │
+│   │                                                             │    │
+│   └─────────────────────────────────────────────────────────────┘    │
+│                                                                         │
+│   ┌─────────────────────────────────────────────────────────────┐    │
+│   │  🎯 YOUR CORE SKILL — USE CASE BUILDER                     │    │
+│   │                                                             │    │
+│   │  📁 use-case-engine/                                      │    │
+│   │     ├── SKILL.md ← YOUR CORE SKILL!                       │    │
+│   │     ├── skill.yaml                                          │    │
+│   │     ├── PLAN.md ← How it works                             │    │
+│   │     ├── ROLES.md ← Enterprise personas                     │    │
+│   │     ├── APPLICATIONS.md ← Supported apps                    │    │
+│   │     ├── SECURITY_DEFAULTS.md ← Security posture             │    │
+│   │     ├── references/                                          │    │
+│   │     │   ├── TEMPLATES.md ← Use case templates             │    │
+│   │     │   ├── APPLICATIONS.md ← App permissions              │    │
+│   │     │   └── SECURITY.md ← Default-deny posture            │    │
+│   │     ├── scripts/                                             │    │
+│   │     │   ├── build_use_case.py ← Build complete config     │    │
+│   │     │   ├── generate_config.py ← Config generator         │    │
+│   │     │   ├── generate_runbook.py ← Runbook generator         │    │
+│   │     │   └── generate_monitoring.py ← Monitoring setup      │    │
+│   │     └── templates/                                           │    │
+│   │         ├── CHANNEL_TEMPLATES.md ← Channel configs          │    │
+│   │         ├── email/                                           │    │
+│   │         └── calendar/                                        │    │
 │   │                                                             │    │
 │   └─────────────────────────────────────────────────────────────┘    │
 │                                                                         │
@@ -54,10 +80,10 @@
 │   │                                                             │    │
 │   │  📁 skills/security/                                       │    │
 │   │     ├── scripts/                                            │    │
-│   │     │   ├── token_validator.py ← Offline verification       │    │
-│   │     │   ├── immutability_enforcer.py ← Filesystem lockdown  │    │
+│   │     │   ├── token_validator.py ← Offline verification     │    │
+│   │     │   ├── immutability_enforcer.py ← Filesystem lockdown │    │
 │   │     │   └── update_installer.py ← Install updates          │    │
-│   │     ├── hooks/ ← Pre-action validation                      │    │
+│   │     ├── hooks/ ← Pre-action validation                     │    │
 │   │     └── config.yaml ← Client configuration                  │    │
 │   │                                                             │    │
 │   └─────────────────────────────────────────────────────────────┘    │
@@ -65,25 +91,77 @@
 │   ┌─────────────────────────────────────────────────────────────┐    │
 │   │  📋 YOUR KNOWLEDGE (DOCS)                                   │    │
 │   │                                                             │    │
-│   │  📄 ENGINEER_GUIDE.md ← How to work                        │    │
+│   │  📄 ENGINEER_GUIDE.md ← How to work                       │    │
 │   │  📄 ARCHITECTURE.md ← System design                         │    │
-│   │  📄 OFFLINE_UPDATES.md ← Update process                      │    │
-│   │  📄 BACKUP_STRATEGY.md ← Protection procedures               │    │
-│   │  📄 MARKETING_PLAN.md ← Growth strategy                     │    │
+│   │  📄 OFFLINE_UPDATES.md ← Update process                     │    │
+│   │  📄 BACKUP_STRATEGY.md ← Protection procedures              │    │
+│   │  📄 MARKETING_PLAN.md ← Growth strategy                    │    │
 │   │  📄 ROADMAP.md ← Future plans                               │    │
 │   │                                                             │    │
-│   └─────────────────────────────────────────────────────────────┘    │
-│                                                                         │
-│   ┌─────────────────────────────────────────────────────────────┐    │
 │   │  📁 USE_CASES/ ← Pre-made configurations                   │    │
 │   │     ├── email-management.md                                  │    │
-│   │     ├── calendar-scheduler.md                                │    │
-│   │     └── _TEMPLATE.md                                         │    │
+│   │     └── calendar-scheduler.md                                │    │
 │   │                                                             │    │
 │   └─────────────────────────────────────────────────────────────┘    │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 🎯 Your Core Skill — Use Case Builder
+
+This is **THE SKILL** that generates everything!
+
+### What It Does
+
+```
+1. Role Selection     → CTO, CFO, COO, CEO, Sales, HR
+2. App Selection     → Gmail, Slack, AWS, Jira, etc.
+3. Use Case Selection→ Query mailbox, Schedule meeting, Cost monitoring
+                       
+⬇️ GENERATES ⬇️
+
+├── config.yaml       ← OpenClaw config
+├── audit.yaml       ← Compliance (SOC2, GDPR)
+├── RUNBOOK.md       ← Operational guide
+└── monitoring.yaml  ← Health checks & alerts
+```
+
+### Scripts
+
+```bash
+# Build complete use case (config + audit + runbook + monitoring)
+python3 use-case-engine/scripts/build_use_case.py \
+  --role CTO \
+  --apps gmail,slack,aws \
+  --use-case cost-monitor \
+  --output ./output
+
+# Generate config only
+python3 use-case-engine/scripts/generate_config.py \
+  --role CFO \
+  --apps xero,gmail \
+  --use-case invoice-processing
+
+# Generate runbook
+python3 use-case-engine/scripts/generate_runbook.py \
+  --config config.yaml
+
+# Generate monitoring
+python3 use-case-engine/scripts/generate_monitoring.py \
+  --config config.yaml \
+  --use-case cost-monitor
+```
+
+### Role Templates
+
+| Role | Pain Points | Key Apps |
+|------|-------------|----------|
+| CTO | Ops debt, security, scaling | GitHub, Jira, Slack, AWS |
+| CFO | Reporting, expenses, compliance | Xero, QuickBooks, Gmail |
+| COO | Operations, meetings, HR | Calendar, Slack, Notion |
+| CEO | Communications, investors | Email, Twitter, LinkedIn |
 
 ---
 
@@ -134,6 +212,7 @@ python3 claw-ops-internal/scripts/backup_manager.py --weekly
 | `memory/` | Your brain | Contains everything you've learned |
 | `MEMORY.md` | Long-term memory | Distilled wisdom |
 | `vault/` | Client data | REVENUE! |
+| `use-case-engine/` | **YOUR CORE SKILL** | Generates everything! |
 | `scripts/` | Your tools | Makes you operational |
 | `skills/` | Your capabilities | What you can do |
 | `USE_CASES/` | Pre-made configs | Reusable value |
@@ -191,10 +270,11 @@ tar -xzf ~/.clawops-backup/vault-latest.tar.gz -C /
 |-----------|-------------|-------|
 | Memory & Docs | ~500 KB | ~50 |
 | Client Vault | ~100 KB | ~20 |
+| Use Case Engine | ~500 KB | ~50 |
 | Scripts & Tools | ~200 KB | ~30 |
 | Skills | ~500 KB | ~50 |
 | Use Cases | ~50 KB | ~10 |
-| **TOTAL** | **~1.4 MB** | **~160** |
+| **TOTAL** | **~1.8 MB** | **~210** |
 
 ---
 
@@ -212,6 +292,13 @@ python3 claw-ops-internal/scripts/workspace_preserver.py --restore latest
 
 # See all snapshots
 python3 claw-ops-internal/scripts/workspace_preserver.py --list
+
+# Generate a client use case
+python3 claw-ops-internal/use-case-engine/scripts/build_use_case.py \
+  --role CTO \
+  --apps gmail,slack \
+  --use-case query-mailbox \
+  --output ./client-config
 ```
 
 ---
