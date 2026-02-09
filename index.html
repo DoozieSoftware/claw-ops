@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClawOps | Production-Grade OpenClaw Operations</title>
+    <title>ClawOps v2.0 | Production-Grade AI Operations</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -29,8 +29,10 @@
         h1 { font-size: 3.75rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 1.5rem; background: linear-gradient(to right, #fb923c, #ef4444, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         h2 { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin-bottom: 1.5rem; }
         h3 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
-        header { margin-bottom: 4rem; }
-        .badge { display: inline-block; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #fb923c; border: 1px solid rgba(249,115,22,0.3); background: rgba(249,115,22,0.1); border-radius: 9999px; margin-bottom: 1.5rem; }
+        header { margin-bottom: 4rem; text-align: center; }
+        .badge { display: inline-block; padding: 0.5rem 1.25rem; font-size: 0.875rem; font-weight: 700; text-transform: uppercase; color: #fff; background: linear-gradient(to right, #ea580c, #dc2626); border-radius: 9999px; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(249,115,22,0.3); animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 4px 15px rgba(249,115,22,0.3); } 50% { box-shadow: 0 4px 25px rgba(249,115,22,0.5); } }
+        .version-badge { background: linear-gradient(to right, #22c55e, #16a34a); box-shadow: 0 4px 15px rgba(34,197,94,0.3); }
         .subtitle { font-size: 1.5rem; color: #94a3b8; font-weight: 500; margin-bottom: 1.5rem; }
         .subtitle span { color: #f8fafc; }
         section { margin-bottom: 4rem; }
@@ -45,24 +47,24 @@
         .card-icon svg { width: 1.5rem; height: 1.5rem; }
         .card-text { font-size: 0.875rem; color: #94a3b8; line-height: 1.7; }
         
-        .use-case-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
-        @media (min-width: 768px) { .use-case-grid { grid-template-columns: repeat(2, 1fr); } }
-        .use-case { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; transition: all 0.3s; }
-        .use-case:hover { border-color: rgba(249,115,22,0.5); background: rgba(15,23,42,0.6); }
-        .use-case-badge { display: inline-block; padding: 0.25rem 0.5rem; font-size: 0.625rem; font-weight: 600; text-transform: uppercase; color: #22c55e; background: rgba(34,197,94,0.1); border-radius: 0.25rem; margin-bottom: 0.75rem; }
-        .use-case-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.7; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+        .stat-card { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 800; color: #fb923c; display: block; }
+        .stat-label { font-size: 0.875rem; color: #94a3b8; }
         
-        .channel-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1rem; }
-        @media (max-width: 768px) { .channel-grid { grid-template-columns: repeat(2, 1fr); } }
+        .channel-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; margin-bottom: 1rem; }
+        @media (max-width: 768px) { .channel-grid { grid-template-columns: repeat(3, 1fr); } }
         .channel-tag { padding: 0.5rem 1rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.5rem; text-align: center; font-size: 0.75rem; font-weight: 500; color: #cbd5e1; }
-        .channel-tag.highlight { border-color: rgba(249,115,22,0.5); color: #fb923c; }
+        .channel-tag.highlight { border-color: rgba(34,197,94,0.5); color: #22c55e; }
         
-        .pipeline-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
-        @media (min-width: 768px) { .pipeline-grid { grid-template-columns: repeat(2, 1fr); } }
-        .pipeline-card { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; transition: all 0.3s; }
-        .pipeline-card:hover { border-color: rgba(249,115,22,0.5); background: rgba(15,23,42,0.6); }
-        .pipeline-icon { font-size: 2rem; margin-bottom: 0.75rem; }
-        .pipeline-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.6; }
+        .template-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1rem; }
+        @media (min-width: 768px) { .template-grid { grid-template-columns: repeat(3, 1fr); } }
+        .template-card { padding: 1.25rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 0.75rem; transition: all 0.3s; }
+        .template-card:hover { border-color: rgba(249,115,22,0.5); background: rgba(15,23,42,0.6); }
+        .template-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .template-name { font-weight: 600; color: #f8fafc; margin-bottom: 0.25rem; }
+        .template-desc { font-size: 0.75rem; color: #94a3b8; }
         
         .pricing-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
         @media (min-width: 512px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -81,17 +83,13 @@
         .cta-secondary { display: inline-block; padding: 0.75rem 1.5rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.75rem; color: #cbd5e1; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; }
         .cta-secondary:hover { border-color: rgba(249,115,22,0.5); color: #fb923c; }
         
-        .offer-card { background: rgba(249,115,22,0.05); border: 2px solid rgba(249,115,22,0.3); border-radius: 1.5rem; padding: 2.5rem; text-align: center; margin-bottom: 3rem; }
-        .offer-badge { display: inline-block; background: #fb923c; color: #000; font-size: 0.625rem; font-weight: 800; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 9999px; margin-bottom: 1rem; letter-spacing: 0.05em; }
-        .offer-card h3 { font-size: 1.75rem; margin-bottom: 1rem; }
-        .offer-list { list-style: none; padding: 0; margin: 1.5rem 0; text-align: left; display: inline-block; }
-        .offer-list li { padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: #cbd5e1; }
-        .offer-list li::before { content: "✓"; position: absolute; left: 0; color: #fb923c; font-weight: bold; }
-        .offer-note { font-size: 0.875rem; color: #64748b; margin-bottom: 1.5rem; font-style: italic; }
-        
         .github-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.5rem; color: #cbd5e1; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; }
         .github-link:hover { background: #1e293b; border-color: rgba(249,115,22,0.5); color: #fff; }
         .github-link svg { width: 1.25rem; height: 1.25rem; }
+        
+        .wizard-box { background: rgba(249,115,22,0.05); border: 2px solid rgba(249,115,22,0.2); border-radius: 1rem; padding: 2rem; text-align: center; margin-bottom: 2rem; }
+        .wizard-title { font-size: 1.25rem; font-weight: 700; color: #fb923c; margin-bottom: 0.5rem; }
+        .wizard-desc { color: #94a3b8; margin-bottom: 1rem; }
         
         footer { padding-top: 3rem; border-top: 1px solid #1e293b; text-align: center; }
         footer p { color: #64748b; font-size: 0.875rem; }
@@ -106,9 +104,9 @@
 
     <div class="container">
         <header>
-            <span class="badge">Production-Grade</span>
+            <span class="badge version-badge">🚀 v2.0 Now Live</span>
             <h1>ClawOps</h1>
-            <p class="subtitle">Production-ready OpenClaw, <span>without the infrastructure babysitting.</span></p>
+            <p class="subtitle">Production-Grade AI Operations <span>— faster setup, more power</span></p>
             <a href="https://github.com/DoozieSoftware/claw-ops" target="_blank" class="github-link">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 View on GitHub
@@ -116,119 +114,139 @@
         </header>
 
         <section>
-            <h2>The Problem</h2>
-            <p class="problem-text">OpenClaw is powerful, but production is unforgiving. Unsafe defaults, silent failures, and breaking upgrades turn your AI workforce into an ops nightmare.</p>
-            <p class="problem-text"><span class="problem-highlight">Documentation is not accountability. We are.</span></p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">21</span>
+                    <span class="stat-label">AI Providers</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20</span>
+                    <span class="stat-label">Channels</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">60s</span>
+                    <span class="stat-label">Setup Time</span>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h2>What We Deliver</h2>
+            <h2>v2.0 — What's New</h2>
+            <div class="wizard-box">
+                <div class="wizard-title">⚡ One-Click Setup</div>
+                <div class="wizard-desc">Deploy in under 60 seconds. Our QuickStart wizard guides you through configuration.</div>
+                <a href="mailto:akshay@dooziesoft.com?subject=QuickStart" class="cta">Get Started in 60 Seconds →</a>
+            </div>
             <div class="grid">
                 <div class="card">
                     <div class="card-icon">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
-                    <h3>Hardened Setup</h3>
-                    <p class="card-text">VPS/Docker deployment with security-first defaults.</p>
+                    <h3>Health Monitoring</h3>
+                    <p class="card-text">Auto-restart on crash. CPU/memory alerts. Your agent never sleeps.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon" style="background: rgba(239,68,68,0.1); color: #ef4444;">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    <div class="card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
-                    <h3>Upgrade Safety</h3>
-                    <p class="card-text">Version pinning and controlled rollouts. No silent breakage.</p>
+                    <h3>5x Faster Setup</h3>
+                    <p class="card-text">From 30-60 minutes to under 60 seconds. Pre-configured templates for common use cases.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon" style="background: rgba(245,158,11,0.1); color: #f59e0b;">
+                    <div class="card-icon">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     </div>
-                    <h3>Managed Health</h3>
-                    <p class="card-text">Active monitoring, crash diagnostics, and minor tuning.</p>
+                    <h3>Usage Analytics</h3>
+                    <p class="card-text">Track messages, API costs, and token usage. Know where your budget goes.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon" style="background: rgba(168,85,247,0.1); color: #a855f7;">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    <div class="card-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                     </div>
-                    <h3>Runbook Delivery</h3>
-                    <p class="card-text">Environment-specific docs for your team.</p>
+                    <h3>Enterprise Security</h3>
+                    <p class="card-text">DENY ALL by default. Audit trails. Validation engine. Built for regulated industries.</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Use Cases</h2>
-            <div class="use-case-grid">
-                <div class="use-case">
-                    <span class="use-case-badge">Email</span>
-                    <h3>Chat with Your Mailbox</h3>
-                    <p class="use-case-desc">Query emails via Telegram or WhatsApp. Get summaries, find attachments, draft replies.</p>
-                </div>
-                <div class="use-case">
-                    <span class="use-case-badge">Slack</span>
-                    <h3>Daily Standup Bot</h3>
-                    <p class="use-case-desc">Automated standup summaries. No manual updates. Just answers.</p>
-                </div>
-                <div class="use-case">
-                    <span class="use-case-badge">Calendar</span>
-                    <h3>Meeting Scheduler</h3>
-                    <p class="use-case-desc">Natural language scheduling. "Book meeting with John next Tuesday" - done.</p>
-                </div>
-                <div class="use-case">
-                    <span class="use-case-badge">Reporting</span>
-                    <h3>Weekly Reports</h3>
-                    <p class="use-case-desc">Auto-generated summaries from tasks, commits, and metrics.</p>
-                </div>
+            <h2>21 AI Providers — Your Choice</h2>
+            <p class="problem-text">Claude, GPT-4, Groq, Mistral, and 17 more. Mix and match based on cost and quality.</p>
+            <div class="channel-grid" style="margin-top: 1rem;">
+                <div class="channel-tag">Claude</div>
+                <div class="channel-tag">GPT-4</div>
+                <div class="channel-tag highlight">Groq ⚡</div>
+                <div class="channel-tag">Mistral</div>
+                <div class="channel-tag">Gemini</div>
+                <div class="channel-tag">Llama</div>
+                <div class="channel-tag">Jamba</div>
+                <div class="channel-tag">Command R</div>
+                <div class="channel-tag">Sonar</div>
+                <div class="channel-tag">Grok</div>
+                <div class="channel-tag">+12 more</div>
             </div>
+            <p style="color: #64748b; font-size: 0.875rem; margin-top: 1rem;">From budget-friendly to enterprise-grade. Pay per use. No markups.</p>
         </section>
 
         <section>
-            <h2>How We Use It</h2>
-            <p class="problem-text">We built ClawOps by using ClawOps. Real workflows from our own team.</p>
-            <a href="case-studies.html" class="cta-secondary">Read Our Story →</a>
-        </section>
-
-        <section>
-            <h2>Supported Channels</h2>
-            <div class="channel-grid">
-                <div class="channel-tag highlight">WhatsApp</div>
-                <div class="channel-tag highlight">Telegram</div>
+            <h2>20 Communication Channels</h2>
+            <p class="problem-text">Meet your clients where they are. From WhatsApp to enterprise platforms.</p>
+            <div class="channel-grid" style="margin-top: 1rem;">
+                <div class="channel-tag">WhatsApp</div>
+                <div class="channel-tag">Telegram</div>
                 <div class="channel-tag">Slack</div>
                 <div class="channel-tag">Discord</div>
+                <div class="channel-tag">Email</div>
+                <div class="channel-tag">SMS</div>
+                <div class="channel-tag highlight">Teams</div>
+                <div class="channel-tag">Webhooks</div>
+                <div class="channel-tag">Twitter/X</div>
+                <div class="channel-tag">Facebook</div>
+                <div class="channel-tag">Instagram</div>
+                <div class="channel-tag">WeChat</div>
+                <div class="channel-tag">LINE</div>
+                <div class="channel-tag">Matrix</div>
+                <div class="channel-tag">Mattermost</div>
+                <div class="channel-tag">Zulip</div>
+                <div class="channel-tag">Viber</div>
+                <div class="channel-tag">RSS</div>
+                <div class="channel-tag">+2 more</div>
             </div>
         </section>
 
         <section>
-            <h2>Custom Use Cases</h2>
-            <p class="problem-text">Have a system with an API? We can connect it to Telegram, Slack, or WhatsApp. No need to ditch what already works.</p>
-            <p class="problem-text" style="font-size: 0.875rem; color: #64748b;">Zoho CRM, Salesforce, HubSpot, internal tools... if it has an API, we can connect it.</p>
-            <p style="margin-top: 1rem;"><a href="mailto:akshay@dooziesoft.com?subject=Custom Use Case" class="cta-secondary">Tell us what you need →</a></p>
-        </section>
-
-        <section>
-            <h2>Sneak Peek — In Pipeline</h2>
-            <div class="pipeline-grid">
-                <div class="pipeline-card">
-                    <div class="pipeline-icon">🏦</div>
-                    <h3>Account Operator</h3>
-                    <p class="pipeline-desc">For Indian market. Speak with your account in real-time. No middleman.</p>
+            <h2>Industry Templates — Deploy in Minutes</h2>
+            <p class="problem-text">Pre-configured solutions for common use cases. Customize to your needs.</p>
+            <div class="template-grid" style="margin-top: 1.5rem;">
+                <div class="template-card">
+                    <div class="template-icon">👥</div>
+                    <div class="template-name">HR Assistant</div>
+                    <div class="template-desc">Onboarding, leave management, policy Q&A</div>
                 </div>
-                <div class="pipeline-card">
-                    <div class="pipeline-icon">👮</div>
-                    <h3>Safety Officer</h3>
-                    <p class="pipeline-desc">Offline camera feeds and document audit. Everything stays inside your network.</p>
+                <div class="template-card">
+                    <div class="template-icon">💼</div>
+                    <div class="template-name">Sales Bot</div>
+                    <div class="template-desc">Lead qualification, follow-ups, CRM integration</div>
                 </div>
-                <div class="pipeline-card">
-                    <div class="pipeline-icon">🛒</div>
-                    <h3>Purchase Officer</h3>
-                    <p class="pipeline-desc">Negotiation research assistant. Doesn't talk to vendors — helps you negotiate better.</p>
+                <div class="template-card">
+                    <div class="template-icon">🎧</div>
+                    <div class="template-name">Customer Support</div>
+                    <div class="template-desc">Ticket handling, FAQ, order tracking</div>
                 </div>
-                <div class="pipeline-card">
-                    <div class="pipeline-icon">📋</div>
-                    <h3>Project Manager</h3>
-                    <p class="pipeline-desc">Hire a developer, manage via PM Bot. Track progress, assign tasks, all from chat.</p>
+                <div class="template-card">
+                    <div class="template-icon">📋</div>
+                    <div class="template-name">Project Manager</div>
+                    <div class="template-desc">Task tracking, deadlines, status reports</div>
+                </div>
+                <div class="template-card">
+                    <div class="template-icon">🏗️</div>
+                    <div class="template-name">Structural Consultant</div>
+                    <div class="template-desc">Document review, compliance, calculations</div>
                 </div>
             </div>
-            <p style="margin-top: 1.5rem; text-align: center;"><a href="mailto:akshay@dooziesoft.com?subject=Early Access" class="cta">Get Early Access →</a></p>
+            <p style="margin-top: 1.5rem; text-align: center;">
+                <a href="mailto:akshay@dooziesoft.com?subject=Templates" class="cta-secondary">Request Custom Template →</a>
+            </p>
         </section>
 
         <section>
@@ -236,49 +254,46 @@
             <div class="pricing-grid">
                 <div class="price-card">
                     <h3 class="price-title">QuickStart</h3>
-                    <p class="price-desc">1 channel, 1 use case configured</p>
+                    <p class="price-desc">1 channel, 1 template configured, 60-second setup</p>
                     <div class="price-amount">$99<span class="price-period">/one-time</span></div>
                 </div>
                 <div class="price-card featured">
                     <span class="featured-badge">Value</span>
                     <h3 class="price-title">Starter</h3>
-                    <p class="price-desc">1 channel, 3 use cases configured</p>
+                    <p class="price-desc">1 channel, 3 templates, health monitoring included</p>
                     <div class="price-amount">$199<span class="price-period">/one-time</span></div>
                 </div>
                 <div class="price-card">
                     <h3 class="price-title">Business</h3>
-                    <p class="price-desc">All defaults, all channels</p>
+                    <p class="price-desc">All channels, all templates, full analytics</p>
                     <div class="price-amount">$499<span class="price-period">/one-time</span></div>
                 </div>
                 <div class="price-card" style="border-color: rgba(168,85,247,0.5);">
                     <h3 class="price-title" style="color: #a855f7;">ClawCare</h3>
-                    <p class="price-desc">Monthly support and maintenance for your ClawOps</p>
+                    <p class="price-desc">Monthly support, updates, and monitoring</p>
                     <div class="price-amount" style="color: #a855f7;">$99<span class="price-period">/mo</span></div>
                 </div>
             </div>
             <p style="text-align: center; margin-top: 1.5rem; color: #94a3b8;">
                 🇮🇳 <strong>Indian Clients:</strong> 30% off. GST billed extra as applicable.
             </p>
-            <p style="text-align: center; margin-top: 0.5rem; color: #64748b; font-size: 0.875rem;">Custom pricing for more customization. <a href="mailto:akshay@dooziesoft.com" style="color: #fb923c;">Contact us →</a></p>
         </section>
 
         <section>
-            <h2>Early Bird Offer</h2>
-            <div class="offer-card">
-                <div class="offer-badge">Limited</div>
-                <h3>First 10 QuickStarts — FREE</h3>
-                <p>Get a fully configured OpenClaw setup. Zero cost. One condition:</p>
-                <ul class="offer-list">
-                    <li>📧 Email us with your workflow needs</li>
-                    <li>🔒 Let us share your case study on our website</li>
-                </ul>
-                <p class="offer-note">Future upgrades covered via ClawCare ($99/mo)</p>
-                <a href="mailto:akshay@dooziesoft.com?subject=Early Bird QuickStart" class="cta">Claim Free QuickStart →</a>
+            <h2>Get Started</h2>
+            <p class="problem-text">Ready to automate? Choose your path:</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
+                <a href="mailto:akshay@dooziesoft.com?subject=v2.0 QuickStart" class="cta">🚀 Deploy in 60 Seconds</a>
+                <a href="mailto:akshay@dooziesoft.com?subject=v2.0 Demo" class="cta-secondary">Book a Demo</a>
             </div>
+            <p style="text-align: center; margin-top: 2rem; color: #64748b; font-size: 0.875rem;">
+                Questions? Email us at <a href="mailto:akshay@dooziesoft.com" style="color: #fb923c;">akshay@dooziesoft.com</a>
+            </p>
         </section>
 
         <footer>
             <p>Built with ❤️ by <a href="https://dooziesoft.com" target="_blank">DoozieSoft</a></p>
+            <p style="margin-top: 0.5rem; color: #475569;">v2.0 — Production-Grade AI Operations</p>
         </footer>
     </div>
 </body>

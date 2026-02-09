@@ -1,63 +1,118 @@
-# 🦞 ClawOps - Production-Grade OpenClaw Operations
+# 🦞 ClawOps v2.0 - Production-Grade AI Operations
 
 > "Without the infrastructure babysitting."
 
-This is the public landing page for **ClawOps** - production-ready OpenClaw operations for enterprises.
+**ClawOps v2.0** — Production-ready AI operations for enterprises. Faster setup, more power.
 
-## 📄 Pages
+---
 
-| Page | Description |
-|------|-------------|
-| [index.html](./index.html) | Main landing page with pricing and use cases |
-| [ai-providers.html](./ai-providers.html) | AI provider recommendations |
-| [channels.html](./channels.html) | Supported channels overview |
-| [use-cases.html](./use-cases.html) | Curated enterprise use cases |
-| [case-studies.html](./case-studies.html) | How we use ClawOps internally |
+## 🚀 v2.0 Highlights
 
-## 📋 Legal Documents
+| Feature | Improvement |
+|---------|-------------|
+| Setup Time | 30-60 min → **60 seconds** |
+| AI Providers | 6 → **21** |
+| Channels | 4 → **20** |
+| Templates | 0 → **5 industry templates** |
+| Health Monitoring | ❌ → **✅ Auto-restart** |
+| Analytics | ❌ → **✅ Usage dashboard** |
 
-| Document | Description |
-|----------|-------------|
-| [TERMS_OF_SERVICE.md](./TERMS_OF_SERVICE.md) | Terms and conditions |
-| [PRIVACY_POLICY.md](./PRIVACY_POLICY.md) | Privacy commitment |
-| [MASTER_SERVICE_AGREEMENT.md](./MASTER_SERVICE_AGREEMENT.md) | Client agreement template |
+---
 
-## 🎯 What We Do
+## 📊 By the Numbers
 
-- **Hardened OpenClaw deployments** - Security-first defaults
-- **Multi-channel support** - WhatsApp, Telegram, Slack, Discord
-- **AI provider flexibility** - Claude, GPT-4, Gemini, Kimi, Minimax
-- **Custom integrations** - Connect any API (Zoho, Salesforce, HubSpot, internal tools)
-- **Managed operations** - Monitoring, upgrades, and support
+- **21** AI providers (Claude, GPT-4, Groq, Mistral + more)
+- **20** communication channels
+- **5** industry templates ready to deploy
+- **60 seconds** average setup time
+- **24/7** health monitoring included
 
-## 🚀 Pipeline Use Cases
+---
 
-| Use Case | Description |
-|----------|-------------|
-| Account Operator | Real-time account access, Indian market (no middleman) |
-| Safety Officer | Offline camera feed & document audit |
-| Purchase Officer | Negotiation research assistant |
-| Project Manager | PM Bot for developer management |
+## 🎯 What We Deliver
 
-If it has an API, we can connect it.
+### Production-Ready Deployments
+- Hardened security (DENY ALL by default)
+- Auto-restart on crash
+- Audit logging
+- Validation engine
+
+### Multi-Channel
+From WhatsApp to enterprise platforms:
+- Chat: WhatsApp, Telegram, Slack, Discord
+- Business: Teams, Email, SMS
+- Social: Twitter/X, Facebook, Instagram
+- Enterprise: WeChat, LINE, Matrix, Mattermost, Zulip
+- + More channels
+
+### AI Provider Choice
+- Claude (Anthropic)
+- GPT-4 (OpenAI)
+- Groq (Ultra-fast inference)
+- Mistral (Strong coding)
+- Gemini (Google)
+- Llama (Meta)
+- + 15 more providers
+
+---
+
+## 📋 Industry Templates
+
+Pre-configured solutions for common use cases:
+
+| Template | Use Case |
+|----------|----------|
+| **HR Assistant** | Onboarding, leave, policy Q&A |
+| **Sales Bot** | Lead qualification, follow-ups |
+| **Customer Support** | Tickets, FAQ, order tracking |
+| **Project Manager** | Tasks, deadlines, reports |
+| **Structural Consultant** | Document review, compliance |
+
+Deploy in minutes. Customize as needed.
+
+---
 
 ## 💰 Pricing
 
-- **QuickStart**: $99 (1 channel, 1 use case)
-- **Starter**: $199 (1 channel, 3 use cases)
-- **Business**: $499 (all defaults, all channels)
-- **ClawCare**: $99/mo (support and maintenance)
+| Plan | Includes | Price |
+|------|----------|-------|
+| **QuickStart** | 1 channel, 1 template, 60s setup | $99 one-time |
+| **Starter** | 1 channel, 3 templates, monitoring | $199 one-time |
+| **Business** | All channels, all templates, analytics | $499 one-time |
+| **ClawCare** | Monthly support, updates, monitoring | $99/mo |
 
-Indian Clients: 30% off. GST billed extra as applicable.
+**Indian Clients:** 30% off. GST extra.
 
 AI API costs billed by provider, not included.
 
-## 🔗 Links
+---
 
-- 🌐 **Website**: [ClawOps](https://dooziesoftware.github.io/claw-ops/)
+## 🔗 Quick Links
+
+- 🌐 **Website**: https://dooziesoftware.github.io/claw-ops/
 - 📧 **Contact**: akshay@dooziesoft.com
-- 🐙 **GitHub**: [DoozieSoftware/claw-ops](https://github.com/DoozieSoftware/claw-ops)
+- 📞 **Get Started**: Book a demo or deploy in 60 seconds
+
+---
+
+## 📁 Repository Structure
+
+```
+claw-ops/                    # Public landing page & docs
+├── index.html              # Main landing page
+├── ai-providers.html       # AI provider info
+├── channels.html           # Channel list
+├── use-cases.html          # Use case examples
+├── case-studies.html       # Case studies
+├── TERMS_OF_SERVICE.md     # Legal
+├── PRIVACY_POLICY.md       # Legal
+└── MASTER_SERVICE_AGREEMENT.md  # Legal
+```
+
+**Note:** Proprietary modules (installer, health monitor, templates) are in private repository.
 
 ---
 
 **Built with ❤️ by [DoozieSoftware](https://dooziesoft.com)**
+
+*v2.0 — Production-Grade AI Operations*
