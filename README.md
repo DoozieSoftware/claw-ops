@@ -2,117 +2,150 @@
 
 > "Without the infrastructure babysitting."
 
-**ClawOps v2.0** — Production-ready AI operations for enterprises. Faster setup, more power.
+**ClawOps v2.0** — Production-ready AI operations for enterprises.
 
 ---
 
-## 🚀 v2.0 Highlights
+## v2.0 Highlights (February 2026)
 
-| Feature | Improvement |
-|---------|-------------|
-| Setup Time | 30-60 min → **60 seconds** |
-| AI Providers | 6 → **21** |
-| Channels | 4 → **20** |
-| Templates | 0 → **5 industry templates** |
-| Health Monitoring | ❌ → **✅ Auto-restart** |
-| Analytics | ❌ → **✅ Usage dashboard** |
-
----
-
-## 📊 By the Numbers
-
-- **21** AI providers (Claude, GPT-4, Groq, Mistral + more)
-- **20** communication channels
-- **5** industry templates ready to deploy
-- **60 seconds** average setup time
-- **24/7** health monitoring included
+| Metric | Before | After |
+|--------|---------|-------|
+| AI Providers | 6 | **21** |
+| Channels | 4 | **20** |
+| Templates | 0 | **12** |
+| Setup Time | 60 min | **60 sec** |
+| Monthly Cost | Variable | **~₹20** |
 
 ---
 
-## 🎯 What We Deliver
+## What We Deliver
 
-### Production-Ready Deployments
+### ✅ Production-Ready Deployments
 - Hardened security (DENY ALL by default)
 - Auto-restart on crash
 - Audit logging
 - Validation engine
 
-### Multi-Channel
-From WhatsApp to enterprise platforms:
-- Chat: WhatsApp, Telegram, Slack, Discord
-- Business: Teams, Email, SMS
+### ✅ 21 AI Providers
+- **FREE Indian Languages** (Sarvam AI)
+- Claude, GPT-4, Groq, Mistral + 15 more
+- Mix and match based on cost/quality
+
+### ✅ 20 Communication Channels
+- WhatsApp, Telegram, Slack, Discord
+- Email, SMS, Teams
 - Social: Twitter/X, Facebook, Instagram
-- Enterprise: WeChat, LINE, Matrix, Mattermost, Zulip
-- + More channels
+- Enterprise: WeChat, LINE, Matrix
 
-### AI Provider Choice
-- Claude (Anthropic)
-- GPT-4 (OpenAI)
-- Groq (Ultra-fast inference)
-- Mistral (Strong coding)
-- Gemini (Google)
-- Llama (Meta)
-- + 15 more providers
+### ✅ 12 Industry Templates
 
----
-
-## 📋 Industry Templates
-
-Pre-configured solutions for common use cases:
-
-| Template | Use Case |
+| Template | Industry |
 |----------|----------|
-| **HR Assistant** | Onboarding, leave, policy Q&A |
-| **Sales Bot** | Lead qualification, follow-ups |
-| **Customer Support** | Tickets, FAQ, order tracking |
-| **Project Manager** | Tasks, deadlines, reports |
-| **Structural Consultant** | Document review, compliance |
-
-Deploy in minutes. Customize as needed.
-
----
-
-## 💰 Pricing
-
-| Plan | Includes | Price |
-|------|----------|-------|
-| **QuickStart** | 1 channel, 1 template, 60s setup | $99 one-time |
-| **Starter** | 1 channel, 3 templates, monitoring | $199 one-time |
-| **Business** | All channels, all templates, analytics | $499 one-time |
-| **ClawCare** | Monthly support, updates, monitoring | $99/mo |
-
-**Indian Clients:** 30% off. GST extra.
-
-AI API costs billed by provider, not included.
+| HR Assistant | HR/Staffing |
+| Legal Assistant | Law firms |
+| Healthcare Assistant | Hospitals |
+| Education Tutor | Coaching |
+| Real Estate Assistant | Property |
+| Finance Assistant | Banking |
+| Government Assistant | Municipal |
+| Restaurant Assistant | Hospitality |
+| Customer Support | Support |
+| Sales Bot | Sales |
+| Project Manager | PM |
+| Structural Consultant | Engineering |
 
 ---
 
-## 🔗 Quick Links
+## Indian Languages (FREE!)
 
-- 🌐 **Website**: https://dooziesoftware.github.io/claw-ops/
-- 📧 **Contact**: akshay@dooziesoft.com
-- 📞 **Get Started**: Book a demo or deploy in 60 seconds
+Powered by **Sarvam AI** - India's Sovereign AI
+
+| Language | Status | Speakers |
+|----------|--------|----------|
+| Hindi | ✅ LIVE | 500M+ |
+| Kannada | ✅ LIVE | 60M |
+| Marathi | ✅ LIVE | 83M |
+| Tamil | Coming Soon | 70M |
+| Telugu | Coming Soon | 90M |
+| Bengali | Coming Soon | 260M |
+
+**Sarvam AI Pricing:**
+- Chat: FREE (Sarvam-M model)
+- TTS: ₹15/10K characters
+- STT: ₹30/hour
 
 ---
 
-## 📁 Repository Structure
+## Pricing
 
+| Plan | Price | Includes |
+|------|-------|----------|
+| **QuickStart** | $99 | 1 template, 60-sec setup |
+| **Starter** | $199 | 3 templates, monitoring |
+| **Business** | $499 | All templates, analytics |
+| **ClawCare** | $99/mo | Support & updates |
+
+**🇮🇳 Indian Clients:** 30% off. GST extra.
+
+---
+
+## Quick Start
+
+### 1. Get API Key (FREE!)
+
+```bash
+# Sarvam AI (Indian languages - FREE!)
+# Visit: https://dashboard.sarvam.ai/
 ```
-claw-ops/                    # Public landing page & docs
-├── index.html              # Main landing page
-├── ai-providers.html       # AI provider info
-├── channels.html           # Channel list
-├── use-cases.html          # Use case examples
-├── case-studies.html       # Case studies
-├── TERMS_OF_SERVICE.md     # Legal
-├── PRIVACY_POLICY.md       # Legal
-└── MASTER_SERVICE_AGREEMENT.md  # Legal
+
+### 2. Deploy in 60 Seconds
+
+```bash
+curl -sL get.clawops.in | bash
 ```
 
-**Note:** Proprietary modules (installer, health monitor, templates) are in private repository.
+### 3. Configure
+
+```bash
+# Edit config
+nano ~/.clawops/config/openclaw.json
+
+# Apply template
+./scripts/templates.sh --apply hr-assistant-hindi
+```
 
 ---
 
-**Built with ❤️ by [DoozieSoftware](https://dooziesoft.com)**
+## Documentation
 
-*v2.0 — Production-Grade AI Operations*
+| Document | Description |
+|----------|-------------|
+| [index.html](./index.html) | Main landing page |
+| [ai-providers.html](./ai-providers.html) | AI providers list |
+| [channels.html](./channels.html) | Channels overview |
+| [use-cases.html](./use-cases.html) | Use case examples |
+| [TERMS_OF_SERVICE.md](./TERMS_OF_SERVICE.md) | Terms & conditions |
+| [PRIVACY_POLICY.md](./PRIVACY_POLICY.md) | Privacy policy |
+
+---
+
+## Contact
+
+- 📧 **Email:** akshay@dooziesoft.com
+- 🌐 **Website:** https://dooziesoftware.github.io/claw-ops/
+- 🐙 **GitHub:** https://github.com/DoozieSoftware/claw-ops
+
+---
+
+## What's Next
+
+- 🔗 **CRM Integrations:** Salesforce, HubSpot, Zoho
+- 📊 **Advanced Analytics:** Custom dashboards
+- 🔐 **SOC2 Compliance:** Enterprise-ready
+- 🌏 **More Languages:** Tamil, Telugu, Bengali
+
+---
+
+*Built with ❤️ by [DoozieSoftware](https://dooziesoft.com)*
+
+*v2.0 - Production-Grade AI Operations*
