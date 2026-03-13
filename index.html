@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClawOps v2.0 | Production-Grade AI Operations</title>
+    <title>ClawOps v3.0 | AI Operations for Indian Businesses</title>
+    <meta name="description" content="Production-ready AI agents on WhatsApp, Telegram, Slack. Smart Accountant, Quicky, Compliance Calendar + custom development.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -43,7 +44,7 @@
         @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
         .card { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; transition: all 0.3s; }
         .card:hover { border-color: rgba(249,115,22,0.5); background: rgba(15,23,42,0.6); transform: translateY(-2px); }
-        .card-icon { width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; background: rgba(249,115,22,0.1); color: #fb923c; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+        .card-icon { width: 2.5rem; height: 2.5rem; border-radius: 0.5rem; background: rgba(249,115,22,0.1); color: #fb923c; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.25rem; }
         .card-icon svg { width: 1.5rem; height: 1.5rem; }
         .card-text { font-size: 0.875rem; color: #94a3b8; line-height: 1.7; }
         
@@ -58,13 +59,22 @@
         .channel-tag { padding: 0.5rem 1rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.5rem; text-align: center; font-size: 0.75rem; font-weight: 500; color: #cbd5e1; }
         .channel-tag.highlight { border-color: rgba(34,197,94,0.5); color: #22c55e; }
         
-        .template-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1rem; }
-        @media (min-width: 768px) { .template-grid { grid-template-columns: repeat(3, 1fr); } }
-        .template-card { padding: 1.25rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 0.75rem; transition: all 0.3s; }
-        .template-card:hover { border-color: rgba(249,115,22,0.5); background: rgba(15,23,42,0.6); }
-        .template-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .template-name { font-weight: 600; color: #f8fafc; margin-bottom: 0.25rem; }
-        .template-desc { font-size: 0.75rem; color: #94a3b8; }
+        .operator-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+        @media (min-width: 768px) { .operator-grid { grid-template-columns: repeat(3, 1fr); } }
+        .operator-card { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; transition: all 0.3s; text-decoration: none; display: block; }
+        .operator-card:hover { border-color: rgba(249,115,22,0.5); background: rgba(15,23,42,0.6); transform: translateY(-2px); }
+        .operator-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .operator-name { font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .operator-desc { font-size: 0.8rem; color: #94a3b8; line-height: 1.5; }
+        .operator-price { font-size: 0.875rem; color: #22c55e; font-weight: 600; margin-top: 0.75rem; }
+        
+        .service-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+        @media (min-width: 768px) { .service-grid { grid-template-columns: repeat(2, 1fr); } }
+        .service-card { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; }
+        .service-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+        .service-name { font-weight: 700; color: #f8fafc; }
+        .service-price { font-size: 0.875rem; color: #22c55e; font-weight: 600; }
+        .service-desc { font-size: 0.8rem; color: #94a3b8; }
         
         .pricing-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
         @media (min-width: 512px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -82,19 +92,25 @@
         .cta:hover { background: linear-gradient(to right, #fb923c, #ef4444); transform: translateY(-2px); }
         .cta-secondary { display: inline-block; padding: 0.75rem 1.5rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.75rem; color: #cbd5e1; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; }
         .cta-secondary:hover { border-color: rgba(249,115,22,0.5); color: #fb923c; }
+        .cta-outline { display: inline-block; padding: 0.75rem 1.5rem; background: transparent; border: 1px solid #334155; border-radius: 0.75rem; color: #cbd5e1; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; }
+        .cta-outline:hover { border-color: rgba(249,115,22,0.5); color: #fb923c; }
         
         .github-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.5rem; color: #cbd5e1; text-decoration: none; font-size: 0.875rem; transition: all 0.3s; }
         .github-link:hover { background: #1e293b; border-color: rgba(249,115,22,0.5); color: #fff; }
         .github-link svg { width: 1.25rem; height: 1.25rem; }
         
-        .wizard-box { background: rgba(249,115,22,0.05); border: 2px solid rgba(249,115,22,0.2); border-radius: 1rem; padding: 2rem; text-align: center; margin-bottom: 2rem; }
-        .wizard-title { font-size: 1.25rem; font-weight: 700; color: #fb923c; margin-bottom: 0.5rem; }
-        .wizard-desc { color: #94a3b8; margin-bottom: 1rem; }
+        .feature-list { list-style: none; margin-top: 1rem; }
+        .feature-list li { padding: 0.5rem 0; color: #94a3b8; font-size: 0.875rem; display: flex; align-items: center; gap: 0.5rem; }
+        .feature-list li::before { content: "✓"; color: #22c55e; font-weight: bold; }
         
         footer { padding-top: 3rem; border-top: 1px solid #1e293b; text-align: center; }
         footer p { color: #64748b; font-size: 0.875rem; }
         footer a { color: #94a3b8; text-decoration: none; }
         footer a:hover { color: #fb923c; }
+        
+        .trust-badges { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+        .trust-badge { display: flex; align-items: center; gap: 0.5rem; color: #64748b; font-size: 0.75rem; }
+        .trust-badge span { color: #22c55e; }
     </style>
 </head>
 <body>
@@ -104,243 +120,269 @@
 
     <div class="container">
         <header>
-            <span class="badge version-badge">🚀 v2.0 Now Live</span>
+            <span class="badge version-badge">🚀 v3.0 — Operators Ready</span>
             <h1>ClawOps</h1>
-            <p class="subtitle">Production-Grade AI Operations <span>— faster setup, more power</span></p>
-            <a href="https://github.com/DoozieSoftware/claw-ops" target="_blank" class="github-link">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                View on GitHub
-            </a>
+            <p class="subtitle">AI Operations for Indian Businesses <span>— WhatsApp, Telegram, Slack</span></p>
+            <p style="color: #64748b; margin-bottom: 1.5rem; font-size: 1rem;">Smart accountants, status nudgers, compliance trackers — powered by OpenClaw</p>
+            <a href="mailto:akshay@dooziesoft.com?subject=v3.0 Demo" class="cta">Book a Demo →</a>
+            <div class="trust-badges">
+                <div class="trust-badge"><span>✓</span> 52 Skills</div>
+                <div class="trust-badge"><span>✓</span> 37 Channels</div>
+                <div class="trust-badge"><span>✓</span> Indian Pricing</div>
+                <div class="trust-badge"><span>✓</span> ClawCare Support</div>
+            </div>
         </header>
 
         <section>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <span class="stat-number">21</span>
-                    <span class="stat-label">AI Providers</span>
+                    <span class="stat-number">52</span>
+                    <span class="stat-label">Skills</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">20</span>
+                    <span class="stat-number">37</span>
                     <span class="stat-label">Channels</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">60s</span>
-                    <span class="stat-label">Setup Time</span>
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Ready Operators</span>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>v2.0 — What's New</h2>
-            <div class="wizard-box">
-                <div class="wizard-title">⚡ One-Click Setup</div>
-                <div class="wizard-desc">Deploy in under 60 seconds. Our QuickStart wizard guides you through configuration.</div>
-                <a href="mailto:akshay@dooziesoft.com?subject=QuickStart" class="cta">Get Started in 60 Seconds →</a>
+            <h2>🤖 Ready-to-Deploy Operators</h2>
+            <p class="problem-text">Production-ready AI assistants for common business needs. Deploy in days, not weeks.</p>
+            
+            <div class="operator-grid">
+                <a href="quicky.html" class="operator-card">
+                    <div class="operator-icon">💬</div>
+                    <div class="operator-name">Quicky</div>
+                    <div class="operator-desc">Stop chasing people for status updates. Automated daily nudges with summary reports.</div>
+                    <div class="operator-price">₹299/mo</div>
+                </a>
+                
+                <a href="accountant.html" class="operator-card">
+                    <div class="operator-icon">🧾</div>
+                    <div class="operator-name">Smart Accountant</div>
+                    <div class="operator-desc">Your Tally on WhatsApp. Trial balance, receivables, GST summary — just ask.</div>
+                    <div class="operator-price">₹999/mo</div>
+                </a>
+                
+                <a href="compliance.html" class="operator-card">
+                    <div class="operator-icon">📅</div>
+                    <div class="operator-name">Compliance Calendar</div>
+                    <div class="operator-desc">Never miss a deadline. GST, TDS, ROC reminders — 7 days, 3 days, 1 day warning.</div>
+                    <div class="operator-price">₹199/mo</div>
+                </a>
+                
+                <a href="brain.html" class="operator-card">
+                    <div class="operator-icon">🧠</div>
+                    <div class="operator-name">Org Brain</div>
+                    <div class="operator-desc">Company knowledge on WhatsApp. Policies, SOPs, FAQs — searchable instantly.</div>
+                    <div class="operator-price">₹499/mo</div>
+                </a>
+                
+                <a href="marketing.html" class="operator-card">
+                    <div class="operator-icon">📣</div>
+                    <div class="operator-name">Marketing Operator</div>
+                    <div class="operator-desc">AI-powered content creation + outreach. Posts, comments, LinkedIn engagement.</div>
+                    <div class="operator-price">₹699/mo</div>
+                </a>
+                
+                <a href="mailto:akshay@dooziesoft.com?subject=Custom Operator" class="operator-card" style="border-style: dashed;">
+                    <div class="operator-icon">➕</div>
+                    <div class="operator-name">Custom Operator</div>
+                    <div class="operator-desc">Need something else? We build custom operators for your specific needs.</div>
+                    <div class="operator-price">Quote</div>
+                </a>
             </div>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </section>
+
+        <section>
+            <h2>🔧 Custom Services</h2>
+            <p class="problem-text">Need something custom? Our team builds specialized solutions.</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-name">Custom Setup</span>
+                        <span class="service-price">₹1,500/hr</span>
                     </div>
-                    <h3>Health Monitoring</h3>
-                    <p class="card-text">Auto-restart on crash. CPU/memory alerts. Your agent never sleeps.</p>
+                    <div class="service-desc">Channel configuration, AI provider setup, template customization.</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-name">API Integration</span>
+                        <span class="service-price">₹2,000/hr</span>
                     </div>
-                    <h3>5x Faster Setup</h3>
-                    <p class="card-text">From 30-60 minutes to under 60 seconds. Pre-configured templates for common use cases.</p>
+                    <div class="service-desc">Connect your CRM, ERP, or any API. Tally, Zoho, Salesforce, custom APIs.</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-name">Skill Configuration</span>
+                        <span class="service-price">₹1,500/hr</span>
                     </div>
-                    <h3>Usage Analytics</h3>
-                    <p class="card-text">Track messages, API costs, and token usage. Know where your budget goes.</p>
+                    <div class="service-desc">Install and configure any of our 52 skills. GitHub, Notion, Slack, and more.</div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-name">Custom Development</span>
+                        <span class="service-price">Quote</span>
                     </div>
-                    <h3>Enterprise Security</h3>
-                    <p class="card-text">DENY ALL by default. Audit trails. Validation engine. Built for regulated industries.</p>
+                    <div class="service-desc">Full custom operator development. From concept to deployment.</div>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>21 AI Providers — Your Choice</h2>
-            <p class="problem-text">Claude, GPT-4, Groq, Mistral, and 17 more. Mix and match based on cost and quality.</p>
+            <h2>💎 ClawCare Plans</h2>
+            <p class="problem-text">Ongoing support to keep your AI operations running smoothly.</p>
+            
+            <div class="pricing-grid" style="margin-top: 1.5rem;">
+                <div class="price-card">
+                    <h3 class="price-title">Starter</h3>
+                    <p class="price-desc">For single-operator deployments</p>
+                    <ul class="feature-list">
+                        <li>Bug fixes</li>
+                        <li>Security updates</li>
+                        <li>Email support</li>
+                    </ul>
+                    <div class="price-amount">₹2,000<span class="price-period">/mo</span></div>
+                </div>
+                
+                <div class="price-card featured">
+                    <span class="featured-badge">Popular</span>
+                    <h3 class="price-title">Business</h3>
+                    <p class="price-desc">For growing businesses</p>
+                    <ul class="feature-list">
+                        <li>Everything in Starter</li>
+                        <li>Skill/plugin configuration</li>
+                        <li>New channel setup</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <div class="price-amount">₹5,000<span class="price-period">/mo</span></div>
+                </div>
+                
+                <div class="price-card">
+                    <h3 class="price-title">Enterprise</h3>
+                    <p class="price-desc">For large organizations</p>
+                    <ul class="feature-list">
+                        <li>Everything in Business</li>
+                        <li>Dedicated support</li>
+                        <li>Custom development hours</li>
+                        <li>SLA guarantee</li>
+                    </ul>
+                    <div class="price-amount">₹15,000<span class="price-period">/mo</span></div>
+                </div>
+                
+                <div class="price-card" style="border-color: rgba(168,85,247,0.5);">
+                    <h3 class="price-title" style="color: #a855f7;">One-Time Setup</h3>
+                    <p class="price-desc">Get started today</p>
+                    <ul class="feature-list">
+                        <li>Full setup & config</li>
+                        <li>1 operator included</li>
+                        <li>Training session</li>
+                        <li>30-day support</li>
+                    </ul>
+                    <div class="price-amount" style="color: #a855f7;">₹17,000<span class="price-period">/one-time</span></div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 1.5rem; color: #94a3b8;">
+                🇮🇳 <strong>Indian Pricing:</strong> All prices in INR. GST billed extra. Razorpay payments available.
+            </p>
+        </section>
+
+        <section>
+            <h2>📱 Supported Channels</h2>
+            <p class="problem-text">Connect with your team and customers on their preferred platform.</p>
             <div class="channel-grid" style="margin-top: 1rem;">
-                <div class="channel-tag">Claude</div>
-                <div class="channel-tag">GPT-4</div>
-                <div class="channel-tag highlight">Groq ⚡</div>
-                <div class="channel-tag">Mistral</div>
-                <div class="channel-tag">Gemini</div>
-                <div class="channel-tag">Llama</div>
-                <div class="channel-tag">Jamba</div>
-                <div class="channel-tag">Command R</div>
-                <div class="channel-tag">Sonar</div>
-                <div class="channel-tag">Grok</div>
-                <div class="channel-tag">+12 more</div>
-            </div>
-            <p style="color: #64748b; font-size: 0.875rem; margin-top: 1rem;">From budget-friendly to enterprise-grade. Pay per use. No markups.</p>
-        </section>
-
-        <section>
-            <h2>20 Communication Channels</h2>
-            <p class="problem-text">Meet your clients where they are. From WhatsApp to enterprise platforms.</p>
-            <div class="channel-grid" style="margin-top: 1rem;">
-                <div class="channel-tag">WhatsApp</div>
-                <div class="channel-tag">Telegram</div>
+                <div class="channel-tag highlight">WhatsApp</div>
+                <div class="channel-tag highlight">Telegram</div>
                 <div class="channel-tag">Slack</div>
                 <div class="channel-tag">Discord</div>
+                <div class="channel-tag">Teams</div>
                 <div class="channel-tag">Email</div>
                 <div class="channel-tag">SMS</div>
-                <div class="channel-tag highlight">Teams</div>
-                <div class="channel-tag">Webhooks</div>
                 <div class="channel-tag">Twitter/X</div>
-                <div class="channel-tag">Facebook</div>
                 <div class="channel-tag">Instagram</div>
-                <div class="channel-tag">WeChat</div>
+                <div class="channel-tag">Facebook</div>
                 <div class="channel-tag">LINE</div>
-                <div class="channel-tag">Matrix</div>
-                <div class="channel-tag">Mattermost</div>
-                <div class="channel-tag">Zulip</div>
-                <div class="channel-tag">Viber</div>
-                <div class="channel-tag">RSS</div>
-                <div class="channel-tag">+2 more</div>
+                <div class="channel-tag">WeChat</div>
+                <div class="channel-tag">Signal</div>
+                <div class="channel-tag">iMessage</div>
+                <div class="channel-tag">+22 more</div>
             </div>
         </section>
 
         <section>
-            <h2>Industry Templates — Deploy in Minutes</h2>
-            <p class="problem-text">Pre-configured solutions for common use cases. Customize to your needs.</p>
-            <div class="template-grid" style="margin-top: 1.5rem;">
-                <div class="template-card">
-                    <div class="template-icon">👥</div>
-                    <div class="template-name">HR Assistant</div>
-                    <div class="template-desc">Onboarding, leave, policies in Hindi, Kannada, Marathi.</div>
-                </div>
-                <div class="template-card">
-                    <div class="template-icon">⚖️</div>
-                    <div class="template-name">Legal Assistant</div>
-                    <div class="template-desc">Case updates, appointments, client intake for law firms.</div>
-                </div>
-                <div class="template-card">
-                    <div class="template-icon">🏥</div>
-                    <div class="template-name">Healthcare Assistant</div>
-                    <div class="template-desc">Appointments, reports, reminders for hospitals.</div>
-                </div>
-                <div class="template-card">
-                    <div class="template-icon">📚</div>
-                    <div class="template-name">Education Tutor</div>
-                    <div class="template-desc">Doubts, homework, schedules for coaching centers.</div>
-                </div>
-                <div class="template-card">
-                    <div class="template-icon">🏠</div>
-                    <div class="template-name">Real Estate Assistant</div>
-                    <div class="template-desc">Property inquiries, site visits for consultants.</div>
-                </div>
-                <div class="template-card">
-                    <div class="template-icon">🏦</div>
-                    <div class="template-name">Finance Assistant</div>
-                    <div class="template-desc">Balance, loans, EMI for banks and NBFCs.</div>
-                </div>
-                <div class="template-card">
-                    <div class="template-icon">🏛️</div>
-                    <div class="template-name">Government Assistant</div>
-                    <div class="template-desc">Applications, status, docs for municipal offices.</div>
-                </div>
-                <div class="template-card">
-                    <div class="template-icon">🍽️</div>
-                    <div class="template-name">Restaurant Assistant</div>
-                    <div class="template-desc">Orders, bookings for restaurants and cloud kitchens.</div>
-                </div>
+            <h2>🧩 52 Ready-to-Use Skills</h2>
+            <p class="problem-text">Extend your AI with pre-built integrations.</p>
+            <div class="channel-grid" style="margin-top: 1rem;">
+                <div class="channel-tag">GitHub</div>
+                <div class="channel-tag">Notion</div>
+                <div class="channel-tag">Obsidian</div>
+                <div class="channel-tag">Slack</div>
+                <div class="channel-tag">Discord</div>
+                <div class="channel-tag">1Password</div>
+                <div class="channel-tag">Apple Notes</div>
+                <div class="channel-tag">Apple Reminders</div>
+                <div class="channel-tag">Spotify</div>
+                <div class="channel-tag">Weather</div>
+                <div class="channel-tag">Calendar</div>
+                <div class="channel-tag">GMail</div>
+                <div class="channel-tag">Trello</div>
+                <div class="channel-tag">Things</div>
+                <div class="channel-tag">+37 more</div>
             </div>
-            <p style="color: #64748b; font-size: 0.75rem; margin-top: 1rem; text-align: center;">Templates include SOUL security configuration, channel setup, and skill integration.</p>
-            <p style="margin-top: 1.5rem; text-align: center;">
-                <a href="mailto:akshay@dooziesoft.com?subject=Custom Template" class="cta-secondary">Request Industry-Specific Template →</a>
-            </p>
         </section>
 
         <section>
-            <h2>Pricing</h2>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <h3 class="price-title">QuickStart</h3>
-                    <p class="price-desc">1 channel, 1 template configured, 60-second setup</p>
-                    <div class="price-amount">₹8,500<span class="price-period">/one-time</span></div>
+            <h2>Why ClawOps?</h2>
+            <div class="grid" style="margin-top: 1.5rem;">
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Built for Indian Businesses</h3>
+                    <p class="card-text">Tally integration, Hindi support, GST compliance. We understand Indian SME pain points.</p>
                 </div>
-                <div class="price-card featured">
-                    <span class="featured-badge">Value</span>
-                    <h3 class="price-title">Starter</h3>
-                    <p class="price-desc">1 channel, 3 templates, health monitoring included</p>
-                    <div class="price-amount">₹17,000<span class="price-period">/one-time</span></div>
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p class="card-text">DENY ALL by default. Audit trails. Validation engine. Your data stays yours.</p>
                 </div>
-                <div class="price-card">
-                    <h3 class="price-title">Business</h3>
-                    <p class="price-desc">All channels, all templates, full analytics</p>
-                    <div class="price-amount">₹42,000<span class="price-period">/one-time</span></div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Fast Deployment</h3>
+                    <p class="card-text">Ready operators deploy in days, not months. Start small, scale fast.</p>
                 </div>
-                <div class="price-card" style="border-color: rgba(168,85,247,0.5);">
-                    <h3 class="price-title" style="color: #a855f7;">ClawCare</h3>
-                    <p class="price-desc">Monthly support, updates, and monitoring</p>
-                    <div class="price-amount" style="color: #a855f7;">₹8,500<span class="price-period">/mo</span></div>
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3>WhatsApp-First</h3>
+                    <p class="card-text">Your team already lives on WhatsApp. Meet them where they are.</p>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 1.5rem; color: #94a3b8;">
-                🇮🇳 <strong>Indian Pricing:</strong> All prices in INR. GST billed extra as applicable. Razorpay payments available.
-            </p>
         </section>
 
         <section>
             <h2>Get Started</h2>
             <p class="problem-text">Ready to automate? Choose your path:</p>
             <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1.5rem;">
-                <a href="mailto:akshay@dooziesoft.com?subject=v2.0 QuickStart" class="cta">🚀 Deploy in 60 Seconds</a>
-                <a href="mailto:akshay@dooziesoft.com?subject=v2.0 Demo" class="cta-secondary">Book a Demo</a>
+                <a href="mailto:akshay@dooziesoft.com?subject=v3.0 Demo" class="cta">📞 Book a Demo</a>
+                <a href="mailto:akshay@dooziesoft.com?subject=Custom Quote" class="cta-outline">Get a Quote</a>
             </div>
             <p style="text-align: center; margin-top: 2rem; color: #64748b; font-size: 0.875rem;">
                 Questions? Email us at <a href="mailto:akshay@dooziesoft.com" style="color: #fb923c;">akshay@dooziesoft.com</a>
             </p>
         </section>
 
-        <section>
-            <h2>What's Next</h2>
-            <p class="problem-text">Building for the future. Here's what's coming:</p>
-            <div class="grid" style="margin-top: 1.5rem;">
-                <div class="card">
-                    <div class="card-icon">🔗</div>
-                    <h3>CRM Integrations</h3>
-                    <p class="card-text">Native connectors for Salesforce, HubSpot, Zoho, Pipedrive. Deep integration with your sales stack.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🌏</div>
-                    <h3>More Languages</h3>
-                    <p class="card-text">Tamil, Telugu, Bengali, Gujarati + 4 more. Expanding beyond Hindi, Kannada, Marathi.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Advanced Analytics</h3>
-                    <p class="card-text">Custom dashboards, ROI tracking, performance metrics. Know your AI's impact.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🔐</div>
-                    <h3>SOC2 Compliance</h3>
-                    <p class="card-text">Security audits, compliance documentation. Enterprise-ready for regulated industries.</p>
-                </div>
-            </div>
-            <p style="margin-top: 1.5rem; text-align: center;">
-                <a href="mailto:akshay@dooziesoft.com?subject=Roadmap Input" class="cta-secondary">Share Your Requirements →</a>
-            </p>
-        </section>
-
         <footer>
             <p>Built with ❤️ by <a href="https://dooziesoft.com" target="_blank">DoozieSoft</a></p>
-            <p style="margin-top: 0.5rem; color: #475569;">v2.0 — Production-Grade AI Operations</p>
-            <p style="margin-top: 0.5rem; color: #475569; font-size: 0.75rem;">Proprietary implementation • Public documentation</p>
+            <p style="margin-top: 0.5rem; color: #475569;">v3.0 — AI Operations for Indian Businesses</p>
+            <p style="margin-top: 0.5rem; color: #475569; font-size: 0.75rem;">Powered by OpenClaw</p>
         </footer>
     </div>
 </body>

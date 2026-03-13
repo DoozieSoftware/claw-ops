@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Calendar — Deadline Tracker | ClawOps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #020617; color: #e2e8f0; line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 48rem; margin: 0 auto; padding: 3rem 1.5rem; }
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(to right, #fb923c, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .back-link { color: #fb923c; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { text-decoration: underline; }
+        section { margin-bottom: 2.5rem; }
+        .hero { text-align: center; padding: 2rem 0; }
+        .hero-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .hero-desc { font-size: 1.25rem; color: #94a3b8; margin-bottom: 1.5rem; }
+        .price-tag { font-size: 2rem; font-weight: 800; color: #22c55e; }
+        .price-period { font-size: 1rem; color: #64748b; }
+        
+        .card { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; margin-bottom: 1rem; }
+        .card-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        
+        .feature-list { list-style: none; }
+        .feature-list li { padding: 0.75rem 0; border-bottom: 1px solid #1e293b; display: flex; align-items: center; gap: 0.75rem; }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list .icon { font-size: 1.25rem; }
+        .feature-list .text { color: #cbd5e1; }
+        
+        .cta { display: inline-block; padding: 1rem 2rem; background: linear-gradient(to right, #ea580c, #dc2626); color: white; border-radius: 0.75rem; font-weight: 700; text-decoration: none; margin-right: 1rem; }
+        .cta-secondary { display: inline-block; padding: 1rem 2rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.75rem; color: #cbd5e1; text-decoration: none; }
+        
+        .demo-box { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); border-radius: 1rem; padding: 1.5rem; margin-top: 1.5rem; }
+        .demo-title { color: #fb923c; font-weight: 700; margin-bottom: 0.5rem; }
+        
+        .penalty-box { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); border-radius: 1rem; padding: 1rem; margin-top: 1rem; }
+        .penalty-title { color: #ef4444; font-weight: 700; margin-bottom: 0.5rem; }
+        
+        footer { padding-top: 2rem; border-top: 1px solid #1e293b; text-align: center; color: #64748b; font-size: 0.875rem; }
+        footer a { color: #fb923c; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to ClawOps</a>
+        
+        <div class="hero">
+            <div class="hero-icon">📅</div>
+            <h1>Compliance Calendar</h1>
+            <p class="hero-desc">Never miss a deadline. Never pay a penalty.</p>
+            <div class="price-tag">₹199<span class="price-period">/month</span></div>
+        </div>
+
+        <section>
+            <h2>What It Does</h2>
+            <p style="color: #94a3b8; margin-bottom: 1.5rem;">
+                Automated deadline reminders for Indian compliance. GST, TDS, ROC, PF/ESI — all tracked. 
+            </p>
+            
+            <div class="demo-box">
+                <div class="demo-title">📱 Sample Reminders</div>
+                <p style="color: #94a3b8; font-size: 0.875rem;">
+                    <strong>7 days before:</strong> "📅 GST Return due in 7 days<br>
+                    GSTR-3B for February 2026 is due on 20th March."<br><br>
+                    
+                    <strong>3 days before:</strong> "⚠️ GST Return due in 3 days<br>
+                    GSTR-3B for February 2026 — don't forget!"<br><br>
+                    
+                    <strong>1 day before:</strong> "🚨 URGENT: Due Tomorrow<br>
+                    GSTR-3B for February 2026 — submit today!"<br><br>
+                    
+                    <strong>On due date:</strong> "⏰ Due Today<br>
+                    GSTR-3B for February 2026 — last chance!"
+                </p>
+            </div>
+            
+            <div class="penalty-box">
+                <div class="penalty-title">💸 Real Penalties We Help Avoid</div>
+                <p style="color: #94a3b8; font-size: 0.875rem;">
+                    • GST late filing: ₹50/day (up to ₹10,000)<br>
+                    • TDS late deposit: 1.5% per month<br>
+                    • ROC annual filing: ₹600/day (up to ₹5,00,000)
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>What's Tracked</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">🧾</span><span class="text">GST — GSTR-1, GSTR-3B, annual return</span></li>
+                    <li><span class="icon">💼</span><span class="text">TDS — Quarterly returns, certificates</span></li>
+                    <li><span class="icon">🏢</span><span class="text">ROC — Annual filing, DIR-3 KYC</span></li>
+                    <li><span class="icon">👷</span><span class="text">PF/ESI — Monthly contributions</span></li>
+                    <li><span class="icon">📈</span><span class="text">Income Tax — Advance tax, ITR</span></li>
+                    <li><span class="icon">📋</span><span class="text">Professional Tax — State-specific</span></li>
+                    <li><span class="icon">📝</span><span class="text">Custom deadlines — Your specific dates</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">🔔</span><span class="text">Multi-level reminders — 7d, 3d, 1d, due day</span></li>
+                    <li><span class="icon">👤</span><span class="text">Assignee tracking — who handles what</span></li>
+                    <li><span class="icon">💰</span><span class="text">Penalty calculator — know your potential fine</span></li>
+                    <li><span class="icon">✅</span><span class="text">Status tracking — filed/pending/delayed</span></li>
+                    <li><span class="icon">📧</span><span class="text">CA copy — optionally blind-copy your CA</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Who It's For</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">🏢</span><span class="text">CA firms managing multiple clients</span></li>
+                    <li><span class="icon">📦</span><span class="text">Mid-sized businesses with full compliance load</span></li>
+                    <li><span class="icon">🏭</span><span class="text">Manufacturers with complex GST requirements</span></li>
+                    <li><span class="icon">💼</span><span class="text">Startups with multiple tax obligations</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pricing</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">🎯</span><span class="text"><strong>Compliance Calendar</strong> — ₹199/month</span></li>
+                    <li><span class="icon">🚀</span><span class="text"><strong>Bundle (Compliance + Quicky)</strong> — ₹449/month (save ₹49)</span></li>
+                    <li><span class="icon">📦</span><span class="text"><strong>All Operators Bundle</strong> — ₹1,999/month</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <a href="mailto:akshay@dooziesoft.com?subject=Compliance Calendar Demo" class="cta">Book a Demo</a>
+            <a href="index.html" class="cta-secondary">View All Operators</a>
+        </section>
+
+        <footer>
+            <p>Built with ❤️ by <a href="https://dooziesoft.com">DoozieSoft</a></p>
+            <p>Powered by OpenClaw</p>
+        </footer>
+    </div>
+</body>
+</html>

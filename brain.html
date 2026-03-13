@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Org Brain — Company Knowledge on WhatsApp | ClawOps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #020617; color: #e2e8f0; line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 48rem; margin: 0 auto; padding: 3rem 1.5rem; }
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(to right, #fb923c, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.25rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .back-link { color: #fb923c; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { text-decoration: underline; }
+        section { margin-bottom: 2.5rem; }
+        .hero { text-align: center; padding: 2rem 0; }
+        .hero-icon { font-size: 4rem; margin-bottom: 1rem; }
+        .hero-desc { font-size: 1.25rem; color: #94a3b8; margin-bottom: 1.5rem; }
+        .price-tag { font-size: 2rem; font-weight: 800; color: #22c55e; }
+        .price-period { font-size: 1rem; color: #64748b; }
+        
+        .card { padding: 1.5rem; background: rgba(15,23,42,0.4); border: 1px solid #1e293b; border-radius: 1rem; margin-bottom: 1rem; }
+        .card-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        
+        .feature-list { list-style: none; }
+        .feature-list li { padding: 0.75rem 0; border-bottom: 1px solid #1e293b; display: flex; align-items: center; gap: 0.75rem; }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list .icon { font-size: 1.25rem; }
+        .feature-list .text { color: #cbd5e1; }
+        
+        .cta { display: inline-block; padding: 1rem 2rem; background: linear-gradient(to right, #ea580c, #dc2626); color: white; border-radius: 0.75rem; font-weight: 700; text-decoration: none; margin-right: 1rem; }
+        .cta-secondary { display: inline-block; padding: 1rem 2rem; background: rgba(30,41,59,0.5); border: 1px solid #334155; border-radius: 0.75rem; color: #cbd5e1; text-decoration: none; }
+        
+        .demo-box { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.3); border-radius: 1rem; padding: 1.5rem; margin-top: 1.5rem; }
+        .demo-title { color: #fb923c; font-weight: 700; margin-bottom: 0.5rem; }
+        
+        .rag-badge { display: inline-block; background: #8b5cf6; color: white; padding: 0.25rem 0.75rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem; }
+        
+        footer { padding-top: 2rem; border-top: 1px solid #1e293b; text-align: center; color: #64748b; font-size: 0.875rem; }
+        footer a { color: #fb923c; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to ClawOps</a>
+        
+        <div class="hero">
+            <div class="hero-icon">🧠</div>
+            <h1>Org Brain <span class="rag-badge">RAG-Powered</span></h1>
+            <p class="hero-desc">Your company knowledge on WhatsApp. Searchable. Instant. 24/7.</p>
+            <div class="price-tag">₹499<span class="price-period">/month</span></div>
+        </div>
+
+        <section>
+            <h2>What It Does</h2>
+            <p style="color: #94a3b8; margin-bottom: 1.5rem;">
+                Turn your company documents, policies, and SOPs into an instant Q&A assistant. 
+                New joiner? Just ask WhatsApp.
+            </p>
+            
+            <div class="demo-box">
+                <div class="demo-title">📱 Sample Queries</div>
+                <p style="color: #94a3b8; font-size: 0.875rem;">
+                    <strong>You:</strong> "How do I apply for leave?"<br>
+                    <strong>Bot:</strong> "According to our HR policy (Section 4.2):<br>
+                    • Send application to manager 3 days in advance<br>
+                    • Use the leave request form on the intranet<br>
+                    • For emergency leave, call HR directly<br>
+                    [Source: HR_Policy_2026.pdf]"<br><br>
+                    
+                    <strong>You:</strong> "What's our refund policy?"<br>
+                    <strong>Bot:</strong> "From Customer_Return_Policy.docx:<br>
+                    • Full refund within 7 days of purchase<br>
+                    • Original receipt required<br>
+                    • Refund to original payment method<br>
+                    • For online orders, contact support@company.com"
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>What's Ingested</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">📄</span><span class="text">PDF documents — policies, reports, manuals</span></li>
+                    <li><span class="icon">📝</span><span class="text">Word docs — SOPs, guidelines</span></li>
+                    <li><span class="icon">📊</span><span class="text">Spreadsheets — price lists, org charts</span></li>
+                    <li><span class="icon">🌐</span><span class="text">Web pages — company site, wiki</span></li>
+                    <li><span class="icon">💬</span><span class="text">Past chats — Slack, email threads (optional)</span></li>
+                    <li><span class="icon">📚</span><span class="text">Knowledge base — Notion, Confluence</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">🔍</span><span class="text">Semantic search — understands intent, not just keywords</span></li>
+                    <li><span class="icon">📖</span><span class="text">Source citation — shows which doc the answer came from</span></li>
+                    <li><span class="icon">🌐</span><span class="text">Multilingual — Hindi, Kannada, Tamil, Telugu support</span></li>
+                    <li><span class="icon">🔐</span><span class="text">Access control — department-level permissions</span></li>
+                    <li><span class="icon">📥</span><span class="text">Auto-updates — syncs when docs change</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Who It's For</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">👥</span><span class="text">Companies with 20+ employees</span></li>
+                    <li><span class="icon">👋</span><span class="text">HR teams answering the same questions daily</span></li>
+                    <li><span class="icon">🆕</span><span class="text">Organizations with frequent onboarding</span></li>
+                    <li><span class="icon">📚</span><span class="text">Teams with scattered documentation</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">🧠</span><span class="text">RAG with sentence embeddings (all-MiniLM-L6-v2)</span></li>
+                    <li><span class="icon">🔎</span><span class="text">Hybrid search — vector + keyword (BM25)</span></li>
+                    <li><span class="icon">💾</span><span class="text">SQLite + sqlite-vec for vector storage</span></li>
+                    <li><span class="icon">💬</span><span class="text">WhatsApp, Telegram, Slack interface</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pricing</h2>
+            <div class="card">
+                <ul class="feature-list">
+                    <li><span class="icon">🎯</span><span class="text"><strong>Org Brain</strong> — ₹499/month</span></li>
+                    <li><span class="icon">🚀</span><span class="text"><strong>Bundle (Brain + Quicky)</strong> — ₹699/month (save ₹99)</span></li>
+                    <li><span class="icon">📦</span><span class="text"><strong>All Operators Bundle</strong> — ₹1,999/month</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <a href="mailto:akshay@dooziesoft.com?subject=Org Brain Demo" class="cta">Book a Demo</a>
+            <a href="index.html" class="cta-secondary">View All Operators</a>
+        </section>
+
+        <footer>
+            <p>Built with ❤️ by <a href="https://dooziesoft.com">DoozieSoft</a></p>
+            <p>Powered by OpenClaw</p>
+        </footer>
+    </div>
+</body>
+</html>
